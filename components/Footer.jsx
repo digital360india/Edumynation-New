@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#2F3F93] mt-10 text-center ">
+    <div className="w-full bg-[#2F3F93] mt-10 text-center">
       <div className="block sm:flex justify-around p-16">
 
         <div className="flex flex-col gap-4 lg:w-80 justify-center text-center items-center pt-5  ">
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="px-14 ">
+        <div className="px-14 text-white ">
           <div><p className="text-white text-[30px]  font-5xl font-semibold mt-4  mb-4 text-left"> Contact</p></div>
             <div className=" flex items-center gap-3 mb-4 text-[14px]">
               <GoLocation  className="text-xl"/><p>903, Saeed Tower-1, Sheikh Zayed Road, Dubai, UAE</p>

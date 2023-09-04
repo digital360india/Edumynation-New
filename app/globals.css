@@ -25,3 +25,37 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+/* progress bar css */
+.circular-progress-bar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 4px solid #e0e0e0;
+}
+
+.circular-progress-bar .progress {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #2196F3;
+  border-radius: 50%;
+}
+
+.circular-progress-bar-blue .progress {
+  background-color: #2196F3;
+}
+
+.circular-progress-bar-green .progress {
+  background-color: #4CAF50;
+}
+
+.circular-progress-bar-yellow .progress {
+  background-color: #FFC107;
+}
+
+.circular-progress-bar-red .progress {
+  background-color: #F44336;
+}

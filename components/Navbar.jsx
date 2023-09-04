@@ -2,17 +2,20 @@
 
 import React from 'react'
 import { useState } from 'react';
-import { Drawer, Typography, IconButton } from '@material-tailwind/react';
+import {Typography, IconButton } from '@material-tailwind/react';
+import Drawer from "react-modern-drawer";
 import { BsTelephone, BsWhatsapp } from 'react-icons/bs';
 import {GiCancel} from 'react-icons/gi';
-import Image from 'next/image';
 import Link from 'next/link';
+import 'react-modern-drawer/dist/index.css'
 
 const Navbar = () =>  {
   const [navbar, setNavbar] = useState(false);
-  const [openRight, setOpenRight] = useState(false);
-  const openDrawerRight = () => setOpenRight(true);
-  const closeDrawerRight = () => setOpenRight(false);
+  const [isOpen, setIsOpen] = React.useState(false)
+  const toggleDrawer = () => {
+      setIsOpen((prevState) => !prevState)
+  }
+
 
   return (
 
@@ -25,7 +28,7 @@ const Navbar = () =>  {
               <div className="md:hidden flex gap-5 text-white">
                 <Link href="whatsapp://send?abid=+971568228740"><BsWhatsapp className="inline w-6 h-6" /></Link>
                 <Link href="tel:+971568228740"><BsTelephone className="inline w-6 h-6" /></Link>
-                <button className="text-gray-700 rounded-md outline-none focus:border-gray-900 focus:border" onClick={openDrawerRight}>
+                <button className="text-gray-700 rounded-md outline-none focus:border-gray-900 focus:border" onClick={toggleDrawer}>
                   {navbar ? (
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" className=" text-white"/>
@@ -43,20 +46,20 @@ const Navbar = () =>  {
             <div className={`flex-1 justify-self-center pb-3 mt-1 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden' }`}>
               <ul className="font-medium items-center w-full opacity-90 text-center justify-center space-y-4 md:flex md:space-x-12 md:space-y-0 py-10 md:py-0">
                 <li className="text-white hover:text-[#6366F1]"><Link href="/" >Home</Link></li>
-                <li className="text-white hover:text-[#6366F1]"><Link href="/about-us" >About Us</Link></li>
-                <li className="text-white hover:text-[#6366F1]"><Link href="/contact-us" >Contact Us</Link></li>
+                <li className="text-white hover:text-[#6366F1]"><Link href="/about" >About</Link></li>
+                <li className="text-white hover:text-[#6366F1]"><Link href="/contact" >Contact</Link></li>
                 <li className="text-white hover:text-[#6366F1]"><Link href="https://blog.edumynation.com/"  target="_blank" className="font-medium">Blogs</Link></li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
-      {/* <React.Fragment>
-        <Drawer placement="right" open={openRight} onClose={closeDrawerRight} className="p-4 bg-[#2F3F93]">
-          <div className="mb-6 flex items-center justify-between">
+      <React.Fragment>
+        <Drawer direction="right" open={isOpen} onClose={toggleDrawer} style={{backgroundColor:"#2F3F93", padding:"16px"}}>
+          {/* <div className="mb-6 flex items-center justify-between">
             <Typography variant="h5" color="indigo"></Typography>
             <IconButton variant="text" color="white" onClick={closeDrawerRight}><GiCancel strokeWidth={2} className="h-5 w-5" /></IconButton>
-          </div>
+          </div> */}
           <div className="flex flex-col text-white gap-5">
             <span onClick={() => btnClick('/')}>Home</span>
             <span onClick={() => btnClick('/')}>About</span>
@@ -68,7 +71,7 @@ const Navbar = () =>  {
             <Link href={'/'} >Terms & Conditions For School</Link>
           </div>
         </Drawer>
-      </React.Fragment> */}
+      </React.Fragment> 
     </div>
   );
 }
