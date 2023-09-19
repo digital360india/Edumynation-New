@@ -12,6 +12,8 @@ import {BsPersonFillGear} from "react-icons/bs";
 import { HiAcademicCap } from "react-icons/hi";
 import {AiOutlinePieChart} from "react-icons/ai";
 
+console.log(process.env.AIRTABLE_API_KEY);
+
 const reviews = [
   {
     name: 'John Doe',

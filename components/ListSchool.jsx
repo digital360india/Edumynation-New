@@ -4,6 +4,7 @@ import EnquireForm from "./enquireForm";
 import styled from "styled-components";
 import { buildUrl } from "cloudinary-build-url";
 
+
 const ListSchool = styled.div`
 margin:60px 20px;
 box-shadow: 0px 2px 2px rgb(0 0 0 / 20%);
