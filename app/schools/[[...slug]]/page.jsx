@@ -1,6 +1,6 @@
 import SchoolDetails from '@/components/SchoolDetails'
 import { base, baseRe } from "@/api/airtable";
-
+const data=[];
 async function get(params)
 {
   const schoolData = await base(params[0])
@@ -21,7 +21,10 @@ async function get1(params){
      })
      .all()
      .then((value) => {
-      console.log(value);
+      value.map((a)=>{
+        data.push(a.fields);
+        
+      })
        return value;
 
      });
@@ -34,26 +37,26 @@ async function get1(params){
 // SSR
 export async function generateMetadata({ params })
  {  
+
   const schoolData=await get(params.slug);
-  const review=await get1(params.slug);
 
   return{
-      title: schoolData?.title,
+      title: schoolData?.name,
       description: schoolData?.Meta_Description ,
     };
  }
 
 export default async function SchoolPage({params}) {
-  // console.log(params)
+  console.log(params)
   const schoolData=await get(params.slug);
-  // const review=await get1(params.slug);
-  // console.log(schoolData);
+  const review=await get1(params.slug);
+  // console.log(review)
   // const review = await get(params.slug)
   return (
     <>
     <div className=''>
-      {schoolData &&
-      <SchoolDetails school={schoolData}  />}
+    
+      <SchoolDetails school={schoolData} reviews={data} city={params.slug[0]} />
    </div>
     </>
   );

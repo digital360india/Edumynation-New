@@ -1,16 +1,16 @@
-'use client'
+// 'use client'
 
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
 const TestimonialCard = ({ img,name,ptag }) => (
-  <div className="bg-gradient-to-br  from-[#DCE4FF] to-[#FFEFF9] p-6 rounded-lg shadow-md w-[80%] mx-auto justify-center text-center">
-    <div className="flex items-center gap-3 justify-center mb-4">
+  <div className="bg-gradient-to-br  from-[#DCE4FF] to-[#FFEFF9] p-6 rounded-lg shadow-md w-[80%] mx-auto  text-center">
+    <div className="flex flex-col sm:flex-row  justify-center   items-center gap-3  mb-4">
       <img
-        className="w-40 h-40 rounded-full"
+        className=" w-60    h-60    rounded-full "
         src={img}
         alt={`${name}'s Photo`}
       />
-      <div><p className=" text-center  ">{ptag}</p>
-    <p className="font-semibold text-center  ">{name}</p>
+      <div><p className=" text-left   ">{ptag}</p>
+    <p className="font-bold text-center  ">{name}</p>
     {/* <p className="text-gray-500">{designation}</p> */}
     </div>
     </div>
@@ -39,11 +39,11 @@ export default function Testimonials({})
   return(
 
 <section className="py-10  ">
-<div className="container w-[100vw] text-justify md:w-[80vw]  mx-auto  md:px-4">
+<div className="container  text-justify md:w-[80vw]  mx-auto  md:px-4">
   <p className="text-2xl font-bold text-center mb-8">TESTIMONIALS</p>
-  <Carousel showArrows={true} showStatus={false} showIndicators={false} showThumbs={false} >
-    {arry.map((testimonial, index) => ( <div className="mt-8 " key={index}><TestimonialCard {...testimonial} /></div>))}
-  </Carousel>
+  {/* <Carousel showArrows={true} showStatus={false} showIndicators={false} showThumbs={false} > */}
+    {arry.map((testimonial, index) => ( <div className="mt-8" key={index}><TestimonialCard {...testimonial} /></div>))}
+  {/* </Carousel> */}
 </div>
 </section>
 )}

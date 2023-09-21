@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react";
+import React, { useEffect,useState } from "react";
 import { GoLocation } from "react-icons/go";
 import StarRating from "./StarRating";
 import { Carousel } from "react-responsive-carousel";
@@ -11,23 +11,24 @@ import {BiBuildingHouse} from "react-icons/bi";
 import {BsPersonFillGear} from "react-icons/bs";
 import { HiAcademicCap } from "react-icons/hi";
 import {AiOutlinePieChart} from "react-icons/ai";
+import Testimonials from "./Testimonial";
 
 // console.log(process.env.AIRTABLE_API_KEY);
 
-const reviews = [
-  {
-    name: 'John Doe',
-    profilePicture: '/Group 500.png',
-    rating: 4,
-    reviewText: 'Great school with excellent facilities.',
-  },
-  {
-    name: 'Jane Smith',
-    profilePicture: '/Group 498.png',
-    rating: 5,
-    reviewText: 'Outstanding education and supportive staff.',
-  },
-];
+// const reviews = [
+//   {
+//     name: 'John Doe',
+//     profilePicture: '/Group 500.png',
+//     rating: 4,
+//     reviewText: 'Great school with excellent facilities.',
+//   },
+//   {
+//     name: 'Jane Smith',
+//     profilePicture: '/Group 498.png',
+//     rating: 5,
+//     reviewText: 'Outstanding education and supportive staff.',
+//   },
+// ];
 
 const ReviewCard = ({ name, profilePicture, rating, reviewText }) => (
   <div className="p-4 rounded-lg mb-4">
@@ -48,45 +49,19 @@ const ReviewCard = ({ name, profilePicture, rating, reviewText }) => (
   </div>
 );
 
-const testimonials = [
-  {
-    name: 'John Doe',
-    designation: 'Principal',
-    photo: '/Group 500.png',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac suscipit arcu, non varius libero.',
-  },
-  {
-    name: 'Jane Smith',
-    designation: 'Parent',
-    photo: '/Group 500.png',
-    content:
-      'Ut sit amet vestibulum ex. Nunc tincidunt, lectus in accumsan venenatis, nisl mi bibendum erat.',
-  },
-  // Add more testimonials
-];
-const TestimonialCard = ({ name, designation, photo, content }) => (
-  <div className="bg-gradient-to-br from-[#DCE4FF] to-[#FFEFF9] p-6 rounded-lg shadow-md w-3/4 justify-center text-center">
-    <div className="flex items-center mb-4">
-      <img
-        className="w-40 h-40 rounded-full"
-        src={photo}
-        alt={`${name}'s Photo`}
-      />
-      <div><p>{content}</p>
-    <p className="font-semibold">{name}</p>
-    <p className="text-gray-500">{designation}</p></div>
-    
-    
-    </div>
-  </div>
-);
 
-const SchoolDetails = ({school}) => {
-  console.log(school)
+const SchoolDetails = ({school,reviews,city}) => {
+  console.log(city)
+//   const [total,setTotal]=useState(0);
+// useEffect(()=>{
+//   setTotal(0);
+//   reviews.map((r)=>{
+//     setTotal((total)=>total+= r.schoolRating)
+//   })
+// },[])
   return (
     <>
-      <div>
+     
         <section className="bgimage">
           <div
             className="relative bg-cover bg-center h-[500px]"
@@ -96,10 +71,10 @@ const SchoolDetails = ({school}) => {
             }}
           >
             <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 ">
-              <div className="text-white text-center space-y-6">
-                <h1 className="text-4xl font-bold mb-4">{school?.title}</h1>
+              <div className="text-white text-center flex flex-col items-center space-y-6">
+                <h1 className="text-4xl font-bold mb-4">{school?.name}</h1>
                 <button className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-lg">Enquire Now</button>
-                <StarRating rating = {4.5} className="mt-4"/>
+                <StarRating rating = {Math.ceil(school?.rating)} review={-1} />
               </div>
             </div>
           </div>
@@ -111,20 +86,34 @@ const SchoolDetails = ({school}) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="md:pr-8">
                   <h2 className="text-2xl font-bold mb-4">ABOUT</h2>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Repellendus cupiditate architecto, debitis tempora nobis,
-                    eaque expedita adipisci recusandae quod accusantium quasi
-                    cumque beatae aspernatur possimus iste obcaecati reiciendis?
-                    Magnam, dolore.
-                  </p>
+                  <p>{school?.Long_Description}</p>
                 </div> 
 
                 <div>
                   <Carousel infiniteLoop={true} dynamicHeight={false} transitionTime={2000} showThumbs={false} >
-                  <div><img src={"https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/dubai/H-400.png"} /></div>
-                  <div> <img src="https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/dubai/I-400.png" /> </div>
-                  <div><img src="https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/dubai/G-400.png" /></div>
+
+                  <div> <img src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+                  city == "abuDhabi"
+                    ? "abu Dhabi"
+                    : city == "alain"
+                    ? "Al ain"
+                    : city
+                }/H-${school?.Image_Code}.png`} /></div>
+                <div> <img src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+                  city == "abuDhabi"
+                    ? "abu Dhabi"
+                    : city == "alain"
+                    ? "Al ain"
+                    : city
+                }/G-${school?.Image_Code}.png`} /></div>
+    <div> <img src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+                  city == "abuDhabi"
+                    ? "abu Dhabi"
+                    : city == "alain"
+                    ? "Al ain"
+                    : city
+                }/I-${school?.Image_Code}.png`} /></div>
+                  {/* <div><img src="https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/dubai/G-400.png" /></div> */}
                 </Carousel>
                 </div>
               </div>
@@ -134,14 +123,14 @@ const SchoolDetails = ({school}) => {
           <section className="py-4">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="md:pr-8">
+              {school?.feefrom&&<div className="md:pr-8">
                   <p>Annual Fees</p>
-                  <p className="text-2xl mb-4 text-[#2F3F93]">$1650 - $2100</p>
-                </div>
+                  <p className="text-2xl mb-4 text-[#2F3F93]">${school?.feefrom} - ${school?.feeto}</p>
+                </div>}
 
                 <div className="flex items-center gap-3 mb-4">
                   <GoLocation />
-                  <p>Sheikh Ammar ban humed Road, Al tallah 2, Ajman</p>
+                  <p>{school?.Address}, {school?.fullAddress},{school?.Town}</p>
                 </div>
               </div>
             </div>
@@ -151,15 +140,15 @@ const SchoolDetails = ({school}) => {
             <div className="container lg:px-8">
               <div className="text-center text-xs md:text-sm">
                 <div className="flex justify-between ">
-                  <p className="">CBSE</p>
-                  <span className="mx-2 text-gray-500">|</span>
-                  <p className="">Day-Boarding</p>
+                  {school?.cbse_schools && <> <p className="">CBSE</p>
+                  <span className="mx-2 text-gray-500">|</span></>}
+                  {school?.day_schools && <><p className="">Day-Boarding</p>
+                  <span className=" mx-2 text-gray-500">|</span></>}
+                  <p className="">{ school?.classfrom} to {school?.classto}</p>
                   <span className=" mx-2 text-gray-500">|</span>
-                  <p className="">KG to Grade 12</p>
-                  <span className=" mx-2 text-gray-500">|</span>
-                  <p className="">Co - ed</p>
-                  <span className=" mx-2 text-gray-500">|</span>
-                  <p className="">2016</p>
+                  {school?.coed_schools&&<><p className="">Co - ed</p>
+                  <span className=" mx-2 text-gray-500">|</span></>}
+                  <p className="">{school?.establishment}</p>
                 </div>
               </div>
             </div>
@@ -174,36 +163,36 @@ const SchoolDetails = ({school}) => {
 
                 <div className="md:flex text-center">
                   <div className="w-16 h-16 lg:w-28 lg:h-28 mx-2">
-                  <CircularProgressbarWithChildren value={92} styles={buildStyles({pathColor: '#2F3F93'})} >
+                  <CircularProgressbarWithChildren value={school?.Infrastructure} styles={buildStyles({pathColor: '#2F3F93'})} >
                     <BiBuildingHouse size={28} color="#2F3F93" />
                   </CircularProgressbarWithChildren>
                   </div>
-                  <p className="lg:my-12  text-xs sm:text-sm md:text-md">Infrastructure<p>92%</p> </p>
+                  <p className="lg:my-12  text-xs sm:text-sm md:text-md">Infrastructure<p>{Math.ceil(school?.Infrastructure)}%</p> </p>
                 </div>
 
                 <div className="md:flex text-center ">
                   <div className="w-16 h-16 lg:w-28 lg:h-28 mx-2">
-                  <CircularProgressbarWithChildren value={93} styles={buildStyles({pathColor: '#287630'})} >
+                  <CircularProgressbarWithChildren value={school?.Administration} styles={buildStyles({pathColor: '#287630'})} >
                     <BsPersonFillGear size={28} color="#2F3F93" />
                   </CircularProgressbarWithChildren>
                   </div>
-                  <p className="lg:my-12 text-xs sm:text-sm md:text-md">Administration<p>93%</p></p>
+                  <p className="lg:my-12 text-xs sm:text-sm md:text-md">Administration<p>{Math.ceil(school?.Administration)}%</p></p>
                 </div>
                 <div className="md:flex text-center">
                   <div className="w-16 h-16 lg:w-28 lg:h-28  mx-2">
-                  <CircularProgressbarWithChildren value={94} styles={buildStyles({pathColor: '#E5C20A'})} >
+                  <CircularProgressbarWithChildren value={school?.Academics} styles={buildStyles({pathColor: '#E5C20A'})} >
                     <HiAcademicCap size={28} color="#2F3F93" />
                   </CircularProgressbarWithChildren>
                   </div>
-                  <p className="lg:my-12 text-xs sm:text-sm md:text-md">Academics<p>94%</p></p>
+                  <p className="lg:my-12 text-xs sm:text-sm md:text-md">Academics<p>{Math.ceil(school?.Academics)}%</p></p>
                 </div>
                 <div className="md:flex text-center">
                 <div className="w-16 h-16 lg:w-28 lg:h-28  mx-2">
-                  <CircularProgressbarWithChildren value={92} styles={buildStyles({pathColor: '#993131'})} >
+                  <CircularProgressbarWithChildren value={school?.Extracurricular} styles={buildStyles({pathColor: '#993131'})} >
                     <AiOutlinePieChart size={28} color="#2F3F93" />
                   </CircularProgressbarWithChildren>
                   </div>
-                  <p className="lg:my-12 text-xs sm:text-sm md:text-md">Extracurricular<p>92%</p></p>
+                  <p className="lg:my-12 text-xs sm:text-sm md:text-md">Extracurricular<p>{Math.ceil(school?.Extracurricular)}%</p></p>
                 </div>
               </div>
             </div>
@@ -228,14 +217,20 @@ const SchoolDetails = ({school}) => {
             </div>
           </section>
 
-          <section className=" py-10">
+          {/* <section className=" py-10">
             <div className="container mx-auto px-4">
               <div className="mb-8"><p className="text-2xl font-bold">RATINGS & REVIEWS</p></div>
               <div className="flex mb-4">
-                <StarRating rating={4.5} />
-                <span className="ml-2">4.5 / 5</span>
+             
+            
+                <StarRating rating={""} />
+                <span className="ml-2">{reviews?.schoolRating}</span>
               </div>
-              <p className="mb-4">25 ratings | 15 reviews</p>
+            
+            <p>Total:{total}</p>
+            
+              <p className="mb-4"> {reviews?.length} reviews</p>
+             
 
               <div className="rounded-lg mb-4">
                 <p className="text-xl font-semibold mb-2">Rate City School Ajman</p>
@@ -251,18 +246,11 @@ const SchoolDetails = ({school}) => {
               </div>
               <button className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-full">View More</button>
             </div>
-          </section>
-
-          <section className="py-10">
-            <div className="container mx-auto px-4">
-              <p className="text-2xl font-bold mb-8">TESTIMONIALS</p>
-              <Carousel showArrows={true} showStatus={false} showIndicators={false} showThumbs={false} >
-                {testimonials.map((testimonial, index) => ( <div key={index}><TestimonialCard {...testimonial} /></div>))}
-              </Carousel>
-            </div>
-          </section>
+          </section> */}
+            
         </div>
-      </div>
+        <Testimonials /> 
+   
     </>
   );
 };

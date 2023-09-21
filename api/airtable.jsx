@@ -12,8 +12,8 @@ Airtable.configure({
 // const baseRe = new Airtable({ apiKey: import.meta.env.VITE_AIRTABLE_API_KEY }).base(
 //   import.meta.env.VITE_AIRTABLE_REVIEW_BASE_ID
 // );
-// const enForm = base(import.meta.env.VITE_AIRTABLE_TABLE_NAME_ENFORM);
-// const table = base(import.meta.env.VITE_AIRTABLE_TABLE_NAME);
+export const enForm = base("enquireForm");
+export const table = base("Sheet2");
 
 // const minifyRecords = (records) => {
 //   return records.map((record) => getMinifiedRecords(record));

@@ -27,7 +27,7 @@ const Author = () => {
             Author
           </h1>
 
-          <div className="px-2 lg:px-10 py-5 flex  bg-white rounded-lg flex-col lg:flex lg:flex-row  w-[300px] md:w-[800px] lg:w-[1200px]  items-center gap-10">
+          <div className="px-2 lg:px-10 py-5 flex  bg-white rounded-lg flex-col lg:flex lg:flex-row  w-[400px] md:w-[800px] lg:w-[1200px]  items-center gap-10">
             <div className="relative h-[350px] w-[300px] rounded-2xl shadow-2xl">
               <img
                 src="/sakshi.jpg"

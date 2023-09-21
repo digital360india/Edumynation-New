@@ -41,7 +41,7 @@ const dataSec = [
     img: "https://res.cloudinary.com/edumynationofficial/image/upload/v1687853731/Other/G-166.png_1024_624.png",
     school: "City school, Ajman",
     header: "AJMAN",
-    link: "/schools/ajman/city-school,-ajman-in-ajman",
+    link: "/schools/ajman/city-school-ajman-in-ajman",
   },
   {
     img: "https://res.cloudinary.com/edumynationofficial/image/upload/v1687854209/Other/G-400.png_1024_624.png",
