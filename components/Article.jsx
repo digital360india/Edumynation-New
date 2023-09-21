@@ -45,7 +45,7 @@ const togglebtn = ()=> {
             <span  onClick={togglebtn}>{isReadMoreShown ? "Read Less" : "Read More"}</span>
             </div>
             {/* | updated on {date} */}
-            <span style={{    color: "grey", margin:"10px auto", display:'block', width:"fit-content", fontSize:"15px"}} className="dates">Author - <Link href="/authors/sakshi-padiyar"><a style={{ color: "blue", fontSize: "13px"}}>Sakshi Padiyar</a></Link> </span>
+            <span style={{    color: "grey", margin:"10px auto", display:'block', width:"fit-content", fontSize:"15px"}} className="dates">Author - <Link href="/Author"><a style={{ color: "blue", fontSize: "13px"}}>Sakshi Padiyar</a></Link> </span>
 
        </ArticleSection>
     )

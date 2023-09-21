@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import React from "react";
 import { GoLocation } from "react-icons/go";
@@ -12,7 +12,7 @@ import {BsPersonFillGear} from "react-icons/bs";
 import { HiAcademicCap } from "react-icons/hi";
 import {AiOutlinePieChart} from "react-icons/ai";
 
-console.log(process.env.AIRTABLE_API_KEY);
+// console.log(process.env.AIRTABLE_API_KEY);
 
 const reviews = [
   {
@@ -82,7 +82,8 @@ const TestimonialCard = ({ name, designation, photo, content }) => (
   </div>
 );
 
-const SchoolDetails = () => {
+const SchoolDetails = ({school}) => {
+  console.log(school)
   return (
     <>
       <div>
@@ -96,7 +97,7 @@ const SchoolDetails = () => {
           >
             <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 ">
               <div className="text-white text-center space-y-6">
-                <h1 className="text-4xl font-bold mb-4">City School, Ajman</h1>
+                <h1 className="text-4xl font-bold mb-4">{school?.title}</h1>
                 <button className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-lg">Enquire Now</button>
                 <StarRating rating = {4.5} className="mt-4"/>
               </div>

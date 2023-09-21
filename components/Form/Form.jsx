@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import { base } from "../../api/airtable";
-import createEnquireForm from "../api/createEnquireForm";
+// import createEnquireForm from "../api/createEnquireForm";
 import { useRouter } from "next/router";
 
 const Form = ({ color }) => {
-  const router = useRouter();
-
+  // const router = useRouter();
   const [details, setDetails] = useState({
     name: "",
     phoneNumber: "",

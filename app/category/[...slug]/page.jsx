@@ -16,6 +16,9 @@ async function get(params)
      });
      return categoryData;
 }
+
+
+// SSR
 export async function generateMetadata({ params })
  {  
   const categoryData = await base("category 2")
@@ -36,6 +39,8 @@ export async function generateMetadata({ params })
       schema3: categoryData?.schema3,
     };
  }
+
+ 
 //Main function
 export default async function ListingPage({params}) {
   const categoryData=await get(params.slug);
@@ -52,8 +57,6 @@ export default async function ListingPage({params}) {
   );
 };
 
-
-// SSR
 
 
  

@@ -10,7 +10,7 @@ import About from "@/components/About";
 import Register from "@/components/Register";
 import ServiceMob from "@/components/ServiceMob";
 import Feature from "@/components/Feature";
-import Form from "@/components/Form";
+import Form from "@/components/Form/Form";
 import ImgSliderMob from "@/components/ImgSliderMob";
 import ImgSlider from "@/components/ImgSlider";
 export default function Home() {
@@ -79,7 +79,7 @@ export default function Home() {
       <DetailMobCard/>
        <ImgSlider/>
       <ImgSliderMob/>
-      {/* <Form/> */}
+      <Form/>
       <Feature/>
       <ServiceMob/>
       <Register/>

@@ -130,7 +130,7 @@ const ListingHero = ({ categoryData }) => {
             className="dates"
           >
             Author -{" "}
-            <Link href="/authors/sakshi-padiyar">
+            <Link href="/Author">
               Sakshi Padiyar
             </Link>{" "}
           </span>

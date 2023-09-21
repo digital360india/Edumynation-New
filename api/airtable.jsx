@@ -4,6 +4,8 @@ Airtable.configure({
   });
  export const base = Airtable.base("apprlGN38HXb6otby");
 
+ export const baseRe = Airtable.base("app48GM4EdJSb4AR6");
+
 // const base = new Airtable({ apiKey: import.meta.env.VITE_AIRTABLE_API_KEY }).base(
 //   import.meta.env.VITE_AIRTABLE_BASE_ID
 // );

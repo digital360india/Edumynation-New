@@ -73,7 +73,7 @@ const MobileArticle = ({ categoryData,param }) => {
             className="dates"
           >
             Author -{" "}
-            <Link to="/authors/sakshi-padiyar">
+            <Link to="/Author">
               <a style={{ color: "blue", fontSize: "13px" }}>Sakshi Padiyar</a>
             </Link>{" "}
           </span>
