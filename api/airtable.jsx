@@ -1,25 +1,31 @@
-// import Airtable from "airtable";
+import Airtable from "airtable";
+Airtable.configure({
+    apiKey:"keyTBOJFFyjyxeoUh"
+  });
+ export const base = Airtable.base("apprlGN38HXb6otby");
 
-// console.log(process.env.AIRTABLE_API_KEY);
+// const base = new Airtable({ apiKey: import.meta.env.VITE_AIRTABLE_API_KEY }).base(
+//   import.meta.env.VITE_AIRTABLE_BASE_ID
+// );
+// const baseRe = new Airtable({ apiKey: import.meta.env.VITE_AIRTABLE_API_KEY }).base(
+//   import.meta.env.VITE_AIRTABLE_REVIEW_BASE_ID
+// );
+// const enForm = base(import.meta.env.VITE_AIRTABLE_TABLE_NAME_ENFORM);
+// const table = base(import.meta.env.VITE_AIRTABLE_TABLE_NAME);
 
-// const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID);
-// const baseRe = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_REVIEW_BASE_ID);
-// const enForm = base(process.env.AIRTABLE_TABLE_NAME_ENFORM);
-// const table = base(process.env.AIRTABLE_TABLE_NAME);
+// const minifyRecords = (records) => {
+//   return records.map((record) => getMinifiedRecords(record));
+// };
 
-// console.log(enForm)
+// const getMinifiedRecords = (record) => {
+//   if (!record.fields.completed) {
+//     record.fields.completed = false;
+//   }
+//   return {
+//     id: record.id,
+//     fields: record.fields,
+//   };
+// };
 
-// const minifyRecords=(records)=>{
-//     return records.map((record)=> getMinifiedRecords(record));
-// }
-// const getMinifiedRecords=(record)=>{
-//     if(!record.fields.completed){
-//         record.fields.completed=false;
-//     }
-//     return {
-//         id: record.id,
-//         fields: record.fields,
-//     }
-// }
+// export { base, baseRe, enForm, table, getMinifiedRecords, minifyRecords };
 
-// export{base,baseRe,enForm,table, getMinifiedRecords, minifyRecords};

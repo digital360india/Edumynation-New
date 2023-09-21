@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Head from "next/head";
 
 const About = () => {
@@ -11,20 +9,11 @@ const About = () => {
   }, []);
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <title>About Us - Edumynation</title>
-        <link rel="canonical" href="https://www.edumynation.com/about-us" />
-      </Head>
-      <div className="w-screen">
-        <div className="h-14 sm:h-24 bg-[#2F3F93]">
-          <Navbar />
-        </div>
-
-        <div className=" bg-gray-100 flex justify-center">
-          <div className=" bg-white w-[1200px] px-6">
+      <div className="w-screen mt-16 md:mt-24 b   ">
+        <div className=" bg-blue-900 flex justify-center ">
+          <div className=" bg-white border-b-2 border-grey-800  w-[1200px] px-6">
             {" "}
-            <div className="flex justify-center mt-4">
+            <div className="flex  justify-center mt-4">
               <img
                 className="w-[400px] h-[300px] lg:w-[500px] lg:h-[500px]"
                 src="https://www.eduminatti.com/eduminatti-about-us.jpeg"
@@ -102,9 +91,6 @@ const About = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="-mt-10">
-          <Footer />
         </div>
       </div>
     </>
