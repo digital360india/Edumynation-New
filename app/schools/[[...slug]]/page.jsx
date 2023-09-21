@@ -49,13 +49,10 @@ export async function generateMetadata({ params })
 export default async function SchoolPage({params}) {
   console.log(params)
   const schoolData=await get(params.slug);
-  const review=await get1(params.slug);
-  // console.log(review)
-  // const review = await get(params.slug)
+  await get1(params.slug);
   return (
     <>
     <div className=''>
-    
       <SchoolDetails school={schoolData} reviews={data} city={params.slug[0]} />
    </div>
     </>

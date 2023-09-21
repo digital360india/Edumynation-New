@@ -32,7 +32,7 @@ const data = [
   {
     img: "https://cdn.discordapp.com/attachments/1078905801017659432/1109419574983667823/Ellipse_11.png",
     header: "ABU  DHABI",
-    city: "schools-in-abu-dhabi",
+    city: "schools-in-abuDhabi",
   },
 ];
 
@@ -70,7 +70,7 @@ const ImgSliderMob = () => {
         SCHOOLS BY CITIES
       </h1>
 <div className="flex justify-center">
-      <div className="flex  overflow-x-scroll gap-5 px-12 py-16 w-full">
+      <div className="flex  overflow-x-scroll scrollbar-hide gap-5 px-12 py-16 w-full">
         {data.map((items) => {
           return (
             <Link href={`/category/${items.city}`}>
@@ -95,7 +95,7 @@ const ImgSliderMob = () => {
         FEATURED SCHOOLS
       </h1>
 
-      <div className="flex  overflow-x-scroll gap-5 mt-8  mb-10 px-12 py-16 w-full">
+      <div className="flex  overflow-x-scroll scrollbar-hide gap-5 mt-8  mb-10 px-12 py-16 w-full">
         {dataSec.map((items) => {
           return (
             <>

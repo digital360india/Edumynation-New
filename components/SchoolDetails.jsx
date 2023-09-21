@@ -13,56 +13,41 @@ import { HiAcademicCap } from "react-icons/hi";
 import {AiOutlinePieChart} from "react-icons/ai";
 import Testimonials from "./Testimonial";
 
-// console.log(process.env.AIRTABLE_API_KEY);
-
-// const reviews = [
-//   {
-//     name: 'John Doe',
-//     profilePicture: '/Group 500.png',
-//     rating: 4,
-//     reviewText: 'Great school with excellent facilities.',
-//   },
-//   {
-//     name: 'Jane Smith',
-//     profilePicture: '/Group 498.png',
-//     rating: 5,
-//     reviewText: 'Outstanding education and supportive staff.',
-//   },
-// ];
-
-const ReviewCard = ({ name, profilePicture, rating, reviewText }) => (
+const ReviewCard = ({ userName,userImg,schoolRating, reviewmessage }) => (
   <div className="p-4 rounded-lg mb-4">
     <div className="flex items-center mb-2">
       <img
         className="w-8 h-8 rounded-full mr-2"
-        src={profilePicture}
-        alt={`${name}'s Profile`}
+        src={userImg}
+        alt={`${ userName}'s Profile`}
       />
       <div>
-        <p className="text-lg font-semibold">{name}</p>
+        <p className="text-lg font-semibold">{userName}</p>
         <div className="flex items-center">
-          <StarRating rating={rating} />
+          <StarRating rating={schoolRating} />
         </div>
       </div>
     </div>
-    <p>{reviewText}</p>
+    <p className="h-24 overflow-y-auto  scrollbar-hide ">{reviewmessage}</p>
   </div>
 );
 
 
 const SchoolDetails = ({school,reviews,city}) => {
-  console.log(city)
-//   const [total,setTotal]=useState(0);
-// useEffect(()=>{
-//   setTotal(0);
-//   reviews.map((r)=>{
-//     setTotal((total)=>total+= r.schoolRating)
-//   })
-// },[])
+  console.log(reviews)
+  const [total,setTotal]=useState(0);
+  const [starv,setStarv]=useState(5);
+useEffect(()=>{
+  let total1=0;
+  reviews.map((r)=>{
+    total1+=r.schoolRating/reviews.length;
+  })
+  setTotal(total1);
+},[])
   return (
     <>
      
-        <section className="bgimage">
+        <section className="bgimage mt-16 md:mt-24 ">
           <div
             className="relative bg-cover bg-center h-[500px]"
             style={{
@@ -90,7 +75,7 @@ const SchoolDetails = ({school,reviews,city}) => {
                 </div> 
 
                 <div>
-                  <Carousel infiniteLoop={true} dynamicHeight={false} transitionTime={2000} showThumbs={false} >
+                  <Carousel infiniteLoop={true} dynamicHeight={false} transitionTime={800} showThumbs={false} >
 
                   <div> <img src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
                   city == "abuDhabi"
@@ -217,36 +202,41 @@ const SchoolDetails = ({school,reviews,city}) => {
             </div>
           </section>
 
-          {/* <section className=" py-10">
+          <section className=" py-10">
             <div className="container mx-auto px-4">
               <div className="mb-8"><p className="text-2xl font-bold">RATINGS & REVIEWS</p></div>
               <div className="flex mb-4">
              
             
-                <StarRating rating={""} />
-                <span className="ml-2">{reviews?.schoolRating}</span>
+                <StarRating rating={total} review={-1} />
               </div>
-            
-            <p>Total:{total}</p>
             
               <p className="mb-4"> {reviews?.length} reviews</p>
              
 
               <div className="rounded-lg mb-4">
                 <p className="text-xl font-semibold mb-2">Rate City School Ajman</p>
-                <div className="flex items-center mb-2"><StarRating /></div>
-                <textarea className="w-1/3 px-3 py-2 border rounded" rows="1" placeholder="Write your review..." />
+                <div className="flex items-center mb-2"><StarRating rating={starv} review={-1}  /></div>
+                <select  defaultValue={5}   onChange={(e)=>setStarv(e.target.value)} className=" -mt-1 border rounded">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <br />
+                <textarea className="w-1/3 px-3 mt-1 py-2 border rounded" rows="1" placeholder="Write your review..." />
               </div>
               <button className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-full">Submit</button>
 
-              <div className="flex gap-4 mt-8">
+              <div className="flex gap-6 mt-8 w-full   overflow-scroll scrollbar-hide ">
                 {reviews.map((review, index) => (
                   <ReviewCard key={index} {...review} />
                 ))}
               </div>
-              <button className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-full">View More</button>
+             
             </div>
-          </section> */}
+          </section>
             
         </div>
         <Testimonials /> 

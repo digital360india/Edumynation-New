@@ -125,8 +125,8 @@ function ImgSlider() {
         SCHOOLS BY CITIES
       </h1>
 
-      <div className="p-12 lg:flex lg:flex-col hidden lg:-mt-14">
-        <Slider {...settings}>
+      <div className="p-12 lg:flex lg:flex-col hidden lg:-mt-14 overflow-x-auto scrollbar-hide  ">
+        <Slider {...settings}  >
           <div className="rounded-full w-80 h-80 p-14 flex flex-col gap-4 items-center text-center  justify-center">
             <Link href="/category/schools-in-dubai">
               <img
@@ -158,6 +158,16 @@ function ImgSlider() {
             <h1> RAK</h1>
           </div>
           <div className="rounded-full w-80 h-80 p-14 flex flex-col gap-4 items-center text-center  justify-center">
+            <Link href="/category/schools-in-abuDhabi">
+              <img
+                className=" rounded-full hover:animate-pulse"
+                src="https://res.cloudinary.com/eduminatti-com/image/upload/v1686208363/edumynation-web/Ellipse_14.png"
+                alt=""
+              />
+            </Link>
+            <h1> ABU DHABI</h1>
+          </div>
+          <div className="rounded-full w-80 h-80 p-14 flex flex-col gap-4 items-center text-center  justify-center">
             <Link href="/category/schools-in-fujairah">
               <img
                 className=" rounded-full hover:animate-pulse"
@@ -168,17 +178,7 @@ function ImgSlider() {
             <h1> FUJAIRAH</h1>
           </div>
           <div className="rounded-full w-80 h-80 p-14 flex flex-col gap-4 items-center text-center  justify-center">
-            <Link href="/category/schools-in-abu-dhabi">
-              <img
-                className=" rounded-full hover:animate-pulse"
-                src="https://res.cloudinary.com/eduminatti-com/image/upload/v1686208363/edumynation-web/Ellipse_14.png"
-                alt=""
-              />
-            </Link>
-            <h1> ABU DHABI</h1>
-          </div>
-          <div className="rounded-full w-80 h-80 p-14 flex flex-col gap-4 items-center text-center  justify-center">
-            <Link href="/category/schools-in-al-ain">
+            <Link href="/category/schools-in-alain">
               <img
                 className=" rounded-full hover:animate-pulse"
                 src="https://cdn.discordapp.com/attachments/1078905801017659432/1109419574983667823/Ellipse_11.png"
