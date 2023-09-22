@@ -34,7 +34,7 @@ const ReviewCard = ({ userName,userImg,schoolRating, reviewmessage }) => (
 
 
 const SchoolDetails = ({school,reviews,city}) => {
-  console.log(reviews)
+  // console.log(reviews)
   const [total,setTotal]=useState(0);
   const [starv,setStarv]=useState(5);
 useEffect(()=>{
