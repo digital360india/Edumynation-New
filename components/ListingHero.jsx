@@ -95,7 +95,7 @@ const ListingHero = ({ categoryData }) => {
         <img src="https://cdn.discordapp.com/attachments/1078905801017659432/1122106772895830056/Group_369.png" alt="ad" />
       </div>
 
-      <div className="sm:flex hidden justify-center px-10 mt-12">
+      <div className="flex  justify-center px-10 mt-12">
         <p>
      
         </p>
