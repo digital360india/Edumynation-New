@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import {
   BsFacebook,
@@ -10,13 +10,13 @@ import {
 } from "react-icons/bs";
 
 import { IoEarth } from "react-icons/io5";
-import { useEffect, useState} from "react";
+// import { useEffect, useState} from "react";
 
 const Author = () => {
 
-    useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-      }, []);
+    // useEffect(() => {
+    //     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    //   }, []);
   return (
     <>
 
