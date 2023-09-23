@@ -41,7 +41,7 @@ export default function Home() {
       <div className="flex justify-center mt-5 lg:mt-16 absolute  top-64 lg:top-52 left-[50%] right-[50%]">
         <div className="flex lg:w-[500px] lg:h-[50px] w-[320px] h-10 bg-white justify-center   items-center rounded-xl lg:rounded-2xl">
           <div className="lg:w-[200px] text-[#909090] ">
-          <select className="outline-none border-none bg-transparent p-2 rounded-l-xl" name="cars"id="cars">
+          <select className="outline-none border-none bg-transparent p-2 rounded-l-xl" defaultValue={value} name="cars"id="cars">
             <option className="text-[#909090] outline-none" value=""> Type of school</option>
             <option className="text-[#909090]" value="boarding" selected>All Schools</option>
           </select>

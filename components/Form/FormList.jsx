@@ -97,7 +97,7 @@ const FormList = () => {
             className="lg:w-[100px] w-[80px]  h-12 shadow-2xl border-[1px] border-[#909090] outline-none "
             name="cars"
             id="cars"
-            value={details.class}
+            defaultValue={details.class}
             onChange={(value) =>
               setDetails({ ...details, class: value.target.value })
             }
@@ -112,7 +112,7 @@ const FormList = () => {
 
           </select>
           <select
-            value={details.board}
+            defaultValue={details.board}
             onChange={(value) =>
               setDetails({ ...details, board: value.target.value })
             }
@@ -127,14 +127,15 @@ const FormList = () => {
             <option value="Gcse">Gcse</option>
             <option value="Cie">Cie</option>
           </select>
-          <select
+          `<select
             className="lg:w-[100px] w-[80px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
             name="cars"
             id="cars"
+            defaultValue="Type Of School"
           >
             <option value="Class">All-Schools</option>
           
-          </select>
+          </select>`
         </div>
         <div className="text-center mt-3">
           <span className="text-[#2F3F93]">{msg}</span>

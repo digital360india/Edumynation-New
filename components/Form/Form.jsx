@@ -105,7 +105,7 @@ const Form = ({ color }) => {
 
             <div className="flex flex-row text-black items-center justify-center lg:gap-7 gap-7 mt-3">
               <select
-                value={details.class}
+                defaultValue={details.class}
                 onChange={(value) =>
                   setDetails({ ...details, class: value.target.value })
                 }
@@ -120,7 +120,7 @@ const Form = ({ color }) => {
                 <option value="All">All</option>
               </select>
               <select
-                value={details.board}
+                defaultValue={details.board}
                 onChange={(value) =>
                   setDetails({ ...details, board: value.target.value })
                 }
@@ -140,6 +140,7 @@ const Form = ({ color }) => {
                 className="lg:w-[100px] w-[80px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
                 name="cars"
                 id="cars"
+                defaultValue="All-Schools"
               >
                 <option value="All-Schools">All-Schools</option>
               </select>

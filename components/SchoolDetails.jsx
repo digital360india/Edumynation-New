@@ -1,5 +1,9 @@
 'use client'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 import React, { useEffect,useState } from "react";
 import { GoLocation } from "react-icons/go";
 import StarRating from "./StarRating";
