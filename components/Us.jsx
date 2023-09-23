@@ -13,7 +13,7 @@ const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
   ssr: false, // Disable server-side rendering for this component
 });
 
-const About = () => {
+const Us = () => {
  
     useEffect(() => {
       if (typeof document !== 'undefined') {
@@ -137,4 +137,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Us;

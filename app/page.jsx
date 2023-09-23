@@ -6,7 +6,7 @@ import TypewriterComponent from "typewriter-effect";
 import Testimonials from "@/components/Testimonial";
 import DetailCard from "@/components/DetailCard";
 import DetailMobCard from "@/components/DetailMobCard";
-import About from "@/components/About";
+import Us from "@/components/Us";
 import Register from "@/components/Register";
 import ServiceMob from "@/components/ServiceMob";
 import Feature from "@/components/Feature";
@@ -75,7 +75,7 @@ export default function Home() {
       <Feature/>
       <ServiceMob/>
       <Register/>
-      <About/>
+      <Us/>
       <Testimonials />
       </>
   
