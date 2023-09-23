@@ -2,7 +2,7 @@
 import React,{useEffect} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+AOS.init();
 const data = [
   {
     img: "https://cdn.discordapp.com/attachments/1078905801017659432/1109371890763567145/image_3_2.png",
@@ -37,9 +37,6 @@ const data = [
 ];
 
 const DetailCard = () => {
-  useEffect(() => {
-    AOS.init();
-  }, [])
   return (
     <>
       <div className="flex items-center gap-4 -mt-10 justify-center">
