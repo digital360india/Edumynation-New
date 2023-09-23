@@ -1,14 +1,19 @@
 'use client'
-import React from "react";
+import React,{useEffect} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 
-AOS.init({
-  duration: 800,
-});
+
 
 const Register = () => {
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      AOS.init({
+        duration: 800,
+      });
+    }
+  }, []);
   return (
     <>
       <div className="bg-[url('https://cdn.discordapp.com/attachments/1078905801017659432/1110831085073481838/Rectangle_30_1.png')] h-[400px] lg:h-[500px] w-full bg-cover mt-10 lg:mt-20">

@@ -1,11 +1,8 @@
 'use client'
-import React from "react";
+import React,{useEffect} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init({
-  duration: 800,
-});
 
 const data = [
   {
@@ -41,6 +38,13 @@ const data = [
 ];
 
 const ServiceMob = () => {
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      AOS.init({
+        duration: 800,
+      });
+    }
+  }, []);
   return (
     <div className="lg:hidden">
       <h1 className="text-center font-bold text-2xl mt-5 pb-10">

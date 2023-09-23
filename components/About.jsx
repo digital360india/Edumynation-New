@@ -1,17 +1,27 @@
 'use client'
-import React from "react";
+import React,{useEffect} from "react";
+import dynamic from "next/dynamic";
 // import CountUp from 'react-countup';
 
-import AnimatedNumbers from "react-animated-numbers";
+// import AnimatedNumbers from "react-animated-numbers";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 
-AOS.init({
-  duration: 2000,
+
+const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
+  ssr: false, // Disable server-side rendering for this component
 });
 
 const About = () => {
+ 
+    useEffect(() => {
+      if (typeof document !== 'undefined') {
+        AOS.init({
+          duration: 2000,
+        });
+      }
+    }, []);
   return (
     <div data-aos="fade-in">
       <p className="text-[#2F3F93] text-center lg:text-3xl text-2xl lg:mt-24 mt-14 lg:pb-14 font-semibold" >

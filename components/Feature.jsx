@@ -1,13 +1,17 @@
 'use client'
-import React from "react";
+import React,{useEffect} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init({
-  duration: 800,
-});
 
 const Feature = () => {
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      AOS.init({
+        duration: 800,
+      });
+    }
+  }, []);
   return (
     <>
       <div className="sm:flex flex-col hidden">
