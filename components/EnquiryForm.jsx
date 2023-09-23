@@ -8,7 +8,7 @@ function EnquiryForm({ mainStyle = false, schoolData }) {
   const router = useRouter();
   const { city, schoolName } = router.query;
 
-  console.log(schoolData);
+  // console.log(schoolData);
 
   const [status, setStatus] = useState('');
   const {
@@ -20,8 +20,8 @@ function EnquiryForm({ mainStyle = false, schoolData }) {
   const onSubmit = async (data) => {
     setStatus('loading....');
     try {
-      console.log('response');
-      console.log(data);
+      // console.log('response');
+      // console.log(data);
 
       base('enquireForm').create(
         [

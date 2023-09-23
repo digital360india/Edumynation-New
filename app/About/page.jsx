@@ -1,14 +1,17 @@
-"use client";
 
-import React, { useEffect } from "react";
-import Head from "next/head";
-
+export async function generateMetadata()
+ {  
+  return{
+      title: "About Us",
+      description: "Welcome to Edumynation - The ultimate guide to the best schools in the United Arab Emirates! " ,
+    };
+ }
+ 
 const About = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
+  
   return (
     <>
+
       <div className="w-screen mt-16 md:mt-24 b   ">
         <div className=" bg-blue-900 flex justify-center ">
           <div className=" bg-white border-b-2 border-grey-800  w-[1200px] px-6">

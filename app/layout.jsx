@@ -6,15 +6,12 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Edumynation",
-  description: "Site is not completed yet work is ongoing ",
+  description: "UAE's premier school listing portal, offering comprehensive insights into the  educational landscape. Compare and select the ideal school for your child.",
 };
 
 const RootLayout = ({ children }) => (
   <html lang='en'>
     <body>
-        {/* <div className='main'>
-          <div className='gradient' />
-        </div> */}
         <main className='app  '>
           <Navbar />
           {children}

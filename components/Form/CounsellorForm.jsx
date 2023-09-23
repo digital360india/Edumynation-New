@@ -127,7 +127,7 @@ function counsellorForm() {
   }
   useEffect(() => {
     setError(null);
-    console.log("insideeeeeee");
+    // console.log("insideeeeeee");
   }, []);
   useEffect(() => {
     if (error == false) {

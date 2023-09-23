@@ -22,7 +22,7 @@ const ArticleSection = styled.article`
 `;
 
 const MobileArticle = ({ categoryData,param }) => {
-    console.log()
+    // console.log()
   const [btn, setbtn] = useState(true);
   const [art, setArt] = useState("");
 

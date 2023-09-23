@@ -44,6 +44,10 @@ export async function generateMetadata({ params })
     title: categoryData?.name,
     description: categoryData?.Meta_description,
     keywords: categoryData?.Meta_keywords ,
+    themeColor:"#163696",
+    alternates:{
+      canonical:`https://www.edumynation.com/school/${params.slug[0]}/${params.slug[1]}`,
+    },
     openGraph: {
      title:categoryData?.name,
      description:categoryData?.Meta_description,
@@ -54,11 +58,7 @@ export async function generateMetadata({ params })
       {url: `https://res.cloudinary.com/edumynationofficial/image/upload/${categoryData?.State}/${params.slug[0]}/${params.slug[1]}-building.jpg`},
      ],
      siteName: "EduMyNation",
-    //  publisher:"https://www.facebook.com/edumynation/",
-    //  updated_time: categoryData?.modified,
-    
     },
-    themeColor:"#163696",
     robots:{
       index:true,
       follow:true,
@@ -79,16 +79,12 @@ export async function generateMetadata({ params })
       site: "@edumynation",
       creator: "@edumynation",
     },
-    
-    alternates:{
-      canonical:`https://www.edumynation.com/school/${params.slug[0]}/${params.slug[1]}`,
-    }
   };
  }
 
 export default async function SchoolPage({params}) {
   const schoolData=await get(params.slug);
-  console.log(schoolData)
+  // console.log(schoolData)
   await get1(params.slug);
   return (
     <>

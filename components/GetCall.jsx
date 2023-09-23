@@ -20,8 +20,8 @@ const GetCall = ({ open, setOpen, schoolName,school }) => {
 const onSubmit = async(data) => {
   setStatus("Submitting....");
   try{
-    console.log("rresponse");
-    console.log(data)
+    // console.log("rresponse");
+    // console.log(data)
    
 
 base('enquireForm').create([

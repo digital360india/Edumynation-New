@@ -14,15 +14,7 @@ import Form from "@/components/Form/Form";
 import ImgSliderMob from "@/components/ImgSliderMob";
 import ImgSlider from "@/components/ImgSlider";
 export default function Home() {
-  // const navigate = useNavigate();
-  // const [value, setvalue] = useState("");
-  // console.log("mmmm=>", value);
 
-  // const navigatePage = () => {
-  //   if (value != "") {
-  //     navigate(`/category/${value}`);
-  //   }
-  // };
   const router = useRouter();
   const [value, setvalue] = useState('');
 

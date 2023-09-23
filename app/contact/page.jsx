@@ -1,15 +1,20 @@
 import { BsYoutube, BsInstagram, BsTwitter } from "react-icons/bs";
 import { BiLogoFacebook } from "react-icons/bi";
-
 import { TfiLocationPin } from "react-icons/tfi";
-
 import { IoCallOutline } from "react-icons/io5";
 import { SlEnvolope } from "react-icons/sl";
+
+export async function generateMetadata() {
+  return {
+    title: "Contact Us",
+    description:
+      "Here are the details to contact our team. You can contact us for free counselling service as well as for registering your school on our website",
+  };
+}
+
 const Contact = () => {
- 
   return (
     <>
-     
       <div className=" mt-16 md:mt-24 ">
         <div className="flex flex-col items-center gap-2 py-20 bg-white  ">
           <h1 className="text-4xl font-semibold py-5">GET IN TOUCH</h1>
@@ -60,8 +65,6 @@ const Contact = () => {
             </div>
           </ul>
         </div>
-
-     
       </div>
     </>
   );
