@@ -47,7 +47,7 @@ const Navbar = () =>  {
               <ul className="  font-medium items-center w-full opacity-90 text-center justify-center space-y-4 md:flex md:space-x-12 md:space-y-0 py-10 md:py-0">
                 <li className="text-white hover:text-[#6366F1]"><Link href={'/'} >Home</Link>
                 </li>
-                <li className="text-white hover:text-[#6366F1]"><Link href={'/about'} >About</Link></li>
+                <li className="text-white hover:text-[#6366F1]"><Link href={'/About'} >About</Link></li>
                 <li className="text-white hover:text-[#6366F1]"><Link href={'/contact'}>Contact</Link></li>
                 <li className="text-white hover:text-[#6366F1]"><Link href="https://blog.edumynation.com/"  target="_blank" className="font-medium">Blogs</Link></li>
               </ul>
@@ -63,7 +63,7 @@ const Navbar = () =>  {
           </div> */}
           <div className="flex flex-col text-white gap-5">
           <Link href={'/'} >Home</Link>
-          <Link href={'/about'} >About</Link>
+          <Link href={'/About'} >About</Link>
           <Link href={'/contact'}>Contact</Link>
             <Link href="https://blog.edumynation.com/" target="_blank" className="font-medium">Blogs</Link>
             <Link href={'/'} >Privacy Policies</Link>
