@@ -41,17 +41,17 @@ const ListingHero = ({ categoryData }) => {
   };
 
   return (
-    <div className="">
-      <div className="lg:h-[500px] h-[350px] bg-contain bg-no-repeat w-full hidden sm:flex sm:flex-col">
+    <>
+     <div className="lg:h-[500px] h-[350px]  bg-contain bg-no-repeat w-full hidden sm:flex sm:flex-col">
         <img
           src="https://cdn.discordapp.com/attachments/1078905801017659432/1111914564183932938/Rectangle_297.png"
-          className="absolute top-0 left-0 right-0 lg:h-[500px] h-[400px] w-full z-[-1] hidden sm:flex md:mt-24  "
+          className="absolute  top-0 left-0 right-0 lg:h-[500px] h-[400px] w-full  hidden sm:flex md:mt-24  "
         />
          <img
           src="https://cdn.discordapp.com/attachments/1078905801017659432/1122111764633501747/Rectangle_8.png"
-          className="absolute top-0 left-0 right-0  h-[650px] w-full z-[-1] mt-16 block sm:hidden "
+          className="absolute top-0 left-0 right-0  h-[650px] w-full  mt-16 block sm:hidden "
         />
-        <div className="flex justify-center lg:mt-20 mt-32 flex-col gap-3 pt-20 items-center text-center">
+        <div className=" relative z-10 flex justify-center lg:mt-20 mt-32 flex-col gap-3 pt-20 items-center text-center">
           <p className="text-white text-2xl lg:text-3xl font-bold">
             FIND THE BEST <span className="text-[#2F3F93]"> SCHOOLS</span> IN{" "}
             <span className="text-[#2F3F93]">SECONDS</span> !
@@ -66,7 +66,7 @@ const ListingHero = ({ categoryData }) => {
             </a>{" "}
           </p>
         </div>
-        <div className="sm:flex hidden gap-3 items-center justify-center mt-20 ">
+        <div className="sm:flex hidden relative z-10 gap-3 items-center justify-center mt-20 ">
           <div className="flex flex-col  gap-1 text-white font-semibold">
             <a className="flex  gap-2" href="tel:+971521026963">
             <FiPhoneCall className="text-[#2F3F93] rounded-full p-2 w-10 h-10 bg-white"></FiPhoneCall>
@@ -78,12 +78,15 @@ const ListingHero = ({ categoryData }) => {
           </div>
         </div>
       </div>
-
+    
+    <div className="bg-white">
+     
+   <div className=" bg-white  ">
       <div className=" flex  text-center items-center gap-2 justify-center lg:text-3xl text-xl mt-20 md:mt-36">
         <span>
           <div className="lg:border-2 border-[1px] lg:w-44 w-20 border-[#2F3F93]"></div>
         </span>
-        <h1 className="uppercase tracking-wide font-bold">{categoryData?.slug.split('-').join(" ")}</h1>
+        <h1 className="uppercase tracking-wide text-black font-bold">{categoryData?.slug.split('-').join(" ")}</h1>
         <span>
           <div className="lg:border-2 border-[1px] lg:w-44 w-20 border-[#2F3F93]"></div>
         </span>
@@ -95,20 +98,17 @@ const ListingHero = ({ categoryData }) => {
         <img src="https://cdn.discordapp.com/attachments/1078905801017659432/1122106772895830056/Group_369.png" alt="ad" />
       </div>
 
-      <div className="flex  justify-center px-10 mt-12">
-        <p>
-     
-        </p>
+      <div className="flex bg-white  justify-center px-10 mt-12">
 
         <ArticleSection>
           {isReadMoreShown ? (
             <div
-              className="innerDiv"
+              className="innerDiv text-black"
               dangerouslySetInnerHTML={{ __html: art }}
             ></div>
           ) : (
             <div
-              className="innerDiv"
+              className="innerDiv text-black"
               dangerouslySetInnerHTML={{
                 __html: art != undefined ? art.substr(0, 1800) : "",
               }}
@@ -137,6 +137,8 @@ const ListingHero = ({ categoryData }) => {
         </ArticleSection>
       </div>
     </div>
+    </div>
+    </>
   );
 };
 

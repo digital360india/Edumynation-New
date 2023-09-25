@@ -62,14 +62,14 @@ useEffect(()=>{
             <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 ">
               <div className="text-white text-center flex flex-col items-center space-y-6">
                 <h1 className="text-4xl font-bold mb-4">{school?.name}</h1>
-                <button className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-lg">Enquire Now</button>
+                {/* <Link href={/} className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-lg">Enquire Now</Link> */}
                 <StarRating rating = {Math.ceil(school?.rating)} review={-1} />
               </div>
             </div>
           </div>
         </section>
 
-        <div className=" bg-gray-100 lg:px-32">
+        <div className=" bg-white text-black lg:px-32">
           <section className=" py-10">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

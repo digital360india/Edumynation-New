@@ -26,6 +26,7 @@ export default function Home() {
 
   return (
     <>
+    <div className="bg-white text-black ">
       <div className="relative bg-cover bg-center mt-16   md:mt-24 h-[450px]"
         style={{
           backgroundImage:'url("https://cdn.discordapp.com/attachments/1078905801017659432/1109361450620825660/Rectangle_1.png")',
@@ -77,6 +78,7 @@ export default function Home() {
       <Register/>
       <Us/>
       <Testimonials />
+      </div>
       </>
   
   )

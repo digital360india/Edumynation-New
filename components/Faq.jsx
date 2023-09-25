@@ -14,7 +14,7 @@ function Faq({ categoryData }) {
   }, [categoryData]);
 
   return (
-    <div className="lg:pb-20">
+    <div className="lg:pb-20 text-black ">
       <div className="flex text-center items-center gap-2 justify-center lg:text-3xl text-2xl mt-24 mb-10">
         <span>
           <div className="lg:border-3 border-[2px] lg:w-44 w-20 border-[#2F3F93]"></div>

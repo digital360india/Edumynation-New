@@ -55,11 +55,12 @@ const scrollPage=()=>{
 
   return (
     <>
-      <div>
+    <div className="bg-white  ">
+      <div className=" bg-white">
 
  
         
-        <div className="flex items-center justify-between  mt-24 mb-10 text-center px-5">
+        <div className="flex items-center justify-between text-black  mt-24 mb-10 text-center px-5">
 
           <div className="lg:hidden flex items-center  gap-3  ">
             <HiAdjustmentsHorizontal className="text-2xl"></HiAdjustmentsHorizontal>
@@ -76,9 +77,9 @@ const scrollPage=()=>{
         </div>
         <div className="my-5 text-center sm:text-left">
 
-<h2 className="sm:pl-16  sm:text-[30px] text-[20px] font-bold"> List of {Math.ceil(employees.length)} Best Schools in {citySlug[0]?.toUpperCase() + citySlug.slice(1,citySlug.length)}</h2>
+<h2 className="sm:pl-16  sm:text-[30px] text-black text-[20px] font-bold"> List of {Math.ceil(employees.length)} Best Schools in {citySlug[0]?.toUpperCase() + citySlug.slice(1,citySlug.length)}</h2>
 </div>
-        <div className="lg:flex sm:items-center  lg:justify-between sm:justify-center lg:px-16 lg:mt-8 pb-8 lg:pb-0">
+        <div className="lg:flex sm:items-center bg-white text-black  lg:justify-between sm:justify-center lg:px-16 lg:mt-8 pb-8 lg:pb-0">
           <div className="lg:flex sm:flex sm:justify-center sm:items-center pl-6 lg:pl-0">
             <div className="lg:flex lg:justify-start  lg:gap-4  items-center">
               <div className="flex ">
@@ -114,7 +115,7 @@ const scrollPage=()=>{
 
         
       </div>
-      <div className=" flex-col sm:flex sm:flex-row lg:pl-16 ">
+      <div className=" flex-col sm:flex sm:flex-row lg:pl-16 bg-white ">
         <div>
           {employees
             .filter((item) => {
@@ -147,8 +148,8 @@ const scrollPage=()=>{
       </div>
 
       {/* paginate */}
-      <>
-        <div className="flex gap-3 items-center md:items-start justify-center md:justify-start sm:pl-10 ">
+      
+        <div className="flex gap-3 text-black  items-center md:items-start justify-center md:justify-start sm:pl-10 ">
           <div className="text-center flex items-center">
             <span>
               <GrFormPrevious className="text-2xl lg:text-xl disabled:text-[#AEAEAE] disabled:cursor-not-allowed " />{" "}
@@ -196,7 +197,8 @@ const scrollPage=()=>{
             </button>
           </div>
         </div>
-      </>
+        
+        </div>
     </>
   );
 };

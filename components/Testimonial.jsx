@@ -38,8 +38,8 @@ export default function Testimonials({})
 {
   return(
 
-<section className="py-10  ">
-<div className="container  text-justify md:w-[80vw]  mx-auto  md:px-4">
+<section className="py-10 bg-white  ">
+<div className="container  text-justify md:w-[80vw]  mx-auto text-black  md:px-4">
   <p className="text-2xl font-bold text-center mb-8">TESTIMONIALS</p>
   {/* <Carousel showArrows={true} showStatus={false} showIndicators={false} showThumbs={false} > */}
     {arry.map((testimonial, index) => ( <div className="mt-8" key={index}><TestimonialCard {...testimonial} /></div>))}

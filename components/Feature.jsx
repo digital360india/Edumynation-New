@@ -19,7 +19,7 @@ const Feature = () => {
           <h1 className="font-bold text-3xl text-[#2F3F93] pt-20">
             EDUMYNATION TOP FEATURES
           </h1>
-          <p className=" pt-12 pb-10">
+          <p className=" pt-12 pb-10  ">
             Try out our unique app features and make your school search much
             more <br /> reliable!
           </p>

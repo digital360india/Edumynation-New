@@ -89,7 +89,8 @@ export default async function ListingPage({ params }) {
         />
       </head>
 
-      <div className="">
+
+      <div className="bg-white">
         <ListingHero categoryData={categoryData}></ListingHero>
         <SchoolCard categoryData={categoryData} />
         <Faq categoryData={categoryData} />

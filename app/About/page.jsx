@@ -27,12 +27,12 @@ const About = () => {
             <ul className="flex justify-center items-center text-center gap-10 my-10 ">
               <li className="border-t-2 w-16 lg:w-96 border-[#2F3F93]"></li>
 
-              <li className="text-2xl sm:text-3xl sm:font-extrabold tracking-wider font-semibold ">
+              <li className="text-2xl sm:text-3xl sm:font-extrabold tracking-wider text-black font-semibold ">
                 About Us
               </li>
               <li className="border-t-2 w-16 lg:w-96 border-[#2F3F93]"></li>
             </ul>
-            <div className="flex flex-col gap-5 leading-6 py-6 ">
+            <div className="flex flex-col gap-5 leading-6 py-6 text-black ">
               <p>
                 Welcome to Edumynation - The ultimate guide to the best schools
                 in the United Arab Emirates!

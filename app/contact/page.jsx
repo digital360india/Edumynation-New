@@ -15,7 +15,7 @@ export async function generateMetadata() {
 const Contact = () => {
   return (
     <>
-      <div className=" mt-16 md:mt-24 ">
+      <div className=" mt-16 md:mt-24 text-black ">
         <div className="flex flex-col items-center gap-2 py-20 bg-white  ">
           <h1 className="text-4xl font-semibold py-5">GET IN TOUCH</h1>
 
