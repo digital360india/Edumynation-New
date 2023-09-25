@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>
 
-    <div className="bg-white text-black ">
+    <div className="bg-white text-black "> 
       <div className="relative bg-cover bg-center mt-16   md:mt-24 h-[450px]"
         style={{
           backgroundImage:'url("https://cdn.discordapp.com/attachments/1078905801017659432/1109361450620825660/Rectangle_1.png")',
@@ -51,7 +51,7 @@ export default function Home() {
           <span className="border-r-2 b w-4 border-[#909090] lg:h-[35px] h-8"></span>
           <div className="  text-[#909090]">
           <select className=" w-32 outline-none bg-transparent border-none p-2 outline-rounded-xl lg:outline-rounded-xl" name="cars"   defaultValue={value} id="cars" onChange={(e) => setvalue(e.target.value)}>
-            <option className="" value="">Location</option>
+            <option className="" value="">Locations</option>
             <option value="schools-in-ajman">Ajman</option>
             <option value="schools-in-dubai">Dubai</option>
             <option value="schools-in-fujairah">Fujairah</option>
