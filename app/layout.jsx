@@ -11,6 +11,9 @@ export const metadata = {
 
 const RootLayout = ({ children }) => (
   <html lang='en'>
+    <head>
+      <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1078905801017659432/1110839909721317386/image_1.png" type="image/x-icon" />
+    </head>
     <body style={{backgroundColor:"white"}}>
         <main className='app  '>
           <Navbar />
