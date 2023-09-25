@@ -11,7 +11,7 @@ export const metadata = {
 
 const RootLayout = ({ children }) => (
   <html lang='en'>
-    <body>
+    <body style={{backgroundColor:"white"}}>
         <main className='app  '>
           <Navbar />
           {children}

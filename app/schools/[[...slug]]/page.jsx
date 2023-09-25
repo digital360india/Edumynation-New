@@ -44,7 +44,6 @@ export async function generateMetadata({ params })
     title: categoryData?.name,
     description: categoryData?.Meta_description,
     keywords: categoryData?.Meta_keywords ,
-    themeColor:"#163696",
     alternates:{
       canonical:`https://www.edumynation.com/school/${params.slug[0]}/${params.slug[1]}`,
     },

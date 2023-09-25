@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
     description: categoryData?.meta_description,
     keywords: categoryData?.keywords,
     authors: [{ name: categoryData?.author }],
-    themeColor: "#163696",
+
     alternates: {
       canonical: `https://www.edumynation.com/category/${params.slug}`,
     },
