@@ -21,7 +21,7 @@ const arry = [
   {
     img: "https://pps.whatsapp.net/v/t61.24694-24/382363365_781087627155278_6662687415877100348_n.jpg?ccb=11-4&oh=01_AdRCR0m4pIoqgVXepNaG6eY-nFwQvxBxr0WquaSiDvolyA&oe=6530D0AE&_nc_sid=000000&_nc_cat=100",
     name: "Nancy",
-    ptag: "This platform amply solved my queries regarding different fields and educational topics. Edu My Nation's consultancy service helped me greatly in planning the education of my kid.",
+    ptag: "This platform amply solved my queries regarding different fields and educational topics. Edu My Nation's consultancy service helped me greatly in planning the education of my sister.",
   },
   {
     img: "https://cdn.discordapp.com/attachments/1078905801017659432/1122048608087330886/tes3.jpg_9061224.png",
