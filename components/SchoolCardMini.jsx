@@ -220,9 +220,9 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
             <div className=" justify-evenly items-center px-1   -mt-2 lg:-mt-12">
               <div className="lg:flex lg:justify-between lg:w-[470px] lg:gap-16 ">
                 <div className="flex flex-row md:flex md:flex-col lg:gap-0 gap-2  items-center  lg:justify-center w-[340px] text-[#596574] font-semibold">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col ">
                     <div className="flex items-center  ">
-                      <p className="text-[11px] lg:text-[10px] lg:w-28 w-[78px]">
+                      <p className="text-[11px] lg:text-[10px] lg:w-28 w-[76px]">
                         Infrastructure
                       </p>
                       <Line
@@ -234,13 +234,13 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                        
 
                       />
-                      <p className="text-[10px]">
+                      <p className="text-[10px] p-1">
                       {data?.fields?.Infrastructure && data?.fields?.Infrastructure?.toString()?.slice(0,2)}%
                       </p>
                     </div>
 
                     <div className="flex items-center  ">
-                      <p className="lg:text-[10px] text-[11px] lg:w-28 w-[78px]">
+                      <p className="lg:text-[10px] text-[11px] lg:w-28 w-[76px]">
                         Academics
                       </p>
                       <Line
@@ -250,7 +250,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                         strokeColor="#FF7900"
                         trailWidth={4}
                       />
-                      <p className="text-[9px]">
+                      <p className="text-[10px] p-1">
                       {data?.fields?.Academics?.toString()?.slice(0,2)}%
                       </p>
                     </div>
@@ -258,7 +258,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
 
                   <div className="flex flex-col">
                     <div className="flex items-center  ">
-                      <p className="text-[11px] lg:text-[10px] lg:w-28 w-[78px]">
+                      <p className="text-[11px] lg:text-[10px] lg:w-28 w-[76px]">
                       Administration
                       </p>
                       <Line
@@ -268,13 +268,13 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                         strokeColor="#FF7900"
                         trailWidth={4}
                       />
-                      <p className="text-[10px]">
+                      <p className="text-[10px] p-1">
                       {data?.fields?.Administration?.toString()?.slice(0,2)}%
                       </p>
                     </div>
 
                     <div className="flex items-center  ">
-                      <p className="lg:text-[10px] text-[10.5px] lg:w-28 w-[78px]">
+                      <p className="lg:text-[10px] text-[10.5px] lg:w-28 w-[76px]">
                         Extracurricular
                       </p>
                       <Line
@@ -284,7 +284,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                         strokeColor="#FF7900"
                         trailWidth={4}
                       />
-                      <p className="text-[9px]">
+                      <p className="text-[10px] p-1">
                       {data?.fields?.Extracurricular?.toString()?.slice(0,2)}%
                       </p>
                     </div>
