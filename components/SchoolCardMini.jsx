@@ -124,9 +124,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                   src="https://cdn.discordapp.com/attachments/1078905801017659432/1111964193558626364/1_2.png"
                   alt=""
                 />
-                <p className="text-[10px] lg:text-[12px] text-[#596574] font-semibold">
-                  Established
-                </p>
+                
                 <p className="text-[10px] lg:text-[12px] font-bold text-[#2F3F93]">
                   {data?.fields?.establishment}
                 </p>
@@ -137,9 +135,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                   src="https://res.cloudinary.com/eduminatti-com/image/upload/v1686225930/edumynation-web/2_4.png"
                   alt=""
                 />
-                <p className="text-[10px] lg:text-[12px] text-[#596574] font-semibold">
-                  Board
-                </p>
+                
                 <p className="text-[10px] lg:text-[12px] font-bold text-[#2F3F93]">
                   {data?.fields?.cbse_schools == true
                     ? "CBSE"
@@ -170,9 +166,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                   src="https://res.cloudinary.com/eduminatti-com/image/upload/v1686225928/edumynation-web/4_2.png"
                   alt=""
                 />
-                <p className="text-[10px] lg:text-[12px] text-[#596574] font-semibold">
-                  Category
-                </p>
+                
                 <p className="text-[10px] lg:text-[12px] font-bold text-[#2F3F93]">
                   {data?.fields?.girls_schools == true
                     ? "Girls School"
@@ -189,9 +183,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                   src="https://res.cloudinary.com/eduminatti-com/image/upload/v1686225926/edumynation-web/5_1.png"
                   alt=""
                 />
-                <p className="text-[10px] lg:text-[12px] text-[#596574] font-semibold">
-                  Type
-                </p>
+                
                 <p className="text-[10px] lg:text-[12px] font-bold text-[#2F3F93]">
                   {data?.fields?.day_schools == true
                     ? "Day School"
@@ -208,25 +200,23 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                   src="https://res.cloudinary.com/eduminatti-com/image/upload/v1686225923/edumynation-web/3_3.png"
                   alt=""
                 />
-                <p className="text-[10px] lg:text-[12px] text-[#596574] font-semibold">
-                  Grade Upto
-                </p>
+                
                 <p className="text-[10px] lg:text-[12px] font-bold text-[#2F3F93]">
                   {data?.fields?.classto}
                 </p>
               </div>
             </div>
 
-            <div className=" justify-evenly items-center px-1   -mt-2 lg:-mt-12">
-              <div className="lg:flex lg:justify-between lg:w-[470px] lg:gap-16 ">
-                <div className="flex flex-row md:flex md:flex-col lg:gap-0 gap-2  items-center  lg:justify-center w-[340px] text-[#596574] font-semibold">
+            <div className=" justify-evenly items-center  -mt-8 lg:-mt-12">
+              <div className="lg:flex px-4  lg:justify-between lg:w-[470px] lg:gap-16 ">
+                <div className="flex flex-col gap-0  md:items-center  lg:justify-center w-[340px] text-[#596574] font-semibold">
                   <div className="flex flex-col ">
-                    <div className="flex items-center  ">
+                    <div className="flex items-center gap-3  ">
                       <p className="text-[11px] lg:text-[10px] lg:w-28 w-[76px]">
                         Infrastructure
                       </p>
                       <Line
-                        className="lg:w-28 w-16"
+                        className="lg:w-28 w-20"
                         percent={data?.fields?.Infrastructure}
                         strokeWidth={4}
                         strokeColor="#FF7900"
@@ -239,12 +229,12 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                       </p>
                     </div>
 
-                    <div className="flex items-center  ">
+                    <div className="flex items-center gap-3 ">
                       <p className="lg:text-[10px] text-[11px] lg:w-28 w-[76px]">
                         Academics
                       </p>
                       <Line
-                        className="lg:w-28 w-16"
+                        className="lg:w-28 w-20"
                         percent={data?.fields?.Academics}
                         strokeWidth={4}
                         strokeColor="#FF7900"
@@ -256,13 +246,13 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col">
-                    <div className="flex items-center  ">
+                  <div className="flex flex-col ">
+                    <div className="flex items-center gap-3  ">
                       <p className="text-[11px] lg:text-[10px] lg:w-28 w-[76px]">
                       Administration
                       </p>
                       <Line
-                        className="lg:w-28 w-16"
+                        className="lg:w-28 w-20"
                         percent={data?.fields?.Administration}
                         strokeWidth={4}
                         strokeColor="#FF7900"
@@ -273,12 +263,12 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                       </p>
                     </div>
 
-                    <div className="flex items-center  ">
+                    <div className="flex items-center gap-3  ">
                       <p className="lg:text-[10px] text-[10.5px] lg:w-28 w-[76px]">
                         Extracurricular
                       </p>
                       <Line
-                        className="lg:w-28 w-16"
+                        className="lg:w-28 w-20"
                         percent={data?.fields?.Extracurricular}
                         strokeWidth={4}
                         strokeColor="#FF7900"
