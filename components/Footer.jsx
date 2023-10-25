@@ -45,11 +45,11 @@ const Footer = () => {
            <div className="flex flex-col space-y-4">
             <Link href={'/'} >Home</Link>
             <Link href={'/'} >Privacy Policies</Link>
-            <Link href={'/'} >About</Link>
+            <Link href={'/About'} >About</Link>
             </div>
             <div  className="flex flex-col space-y-4">
             <Link href={"/"}>Terms & Condition</Link>
-            <Link href={'/'} >Blogs</Link>
+            <Link href={'https://blog.edumynation.com/'} >Blogs</Link>
             <Link href={'/'} >SiteMap</Link>
             </div>
           </div></div>

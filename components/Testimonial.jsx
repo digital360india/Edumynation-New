@@ -5,8 +5,9 @@ const TestimonialCard = ({ img,name,ptag }) => (
   <div className="bg-gradient-to-br  from-[#DCE4FF] to-[#FFEFF9] p-6 rounded-lg shadow-md w-[80%] mx-auto  text-center">
     <div className="flex flex-col sm:flex-row  justify-center   items-center gap-3  mb-4">
       <img
-        className=" w-60    h-60    rounded-full "
+        className=" min-w-[240px] w-[240px] object-cover    h-[240px]    rounded-full "
         src={img}
+      
         alt={`${name}'s Photo`}
       />
       <div><p className=" text-left   ">{ptag}</p>
@@ -19,7 +20,7 @@ const TestimonialCard = ({ img,name,ptag }) => (
 );
 const arry = [
   {
-    img: "https://pps.whatsapp.net/v/t61.24694-24/382363365_781087627155278_6662687415877100348_n.jpg?ccb=11-4&oh=01_AdRCR0m4pIoqgVXepNaG6eY-nFwQvxBxr0WquaSiDvolyA&oe=6530D0AE&_nc_sid=000000&_nc_cat=100",
+    img: "https://res.cloudinary.com/dqulcdek8/image/upload/v1698216965/WhatsApp_Image_2023-10-25_at_12.25.33_b971b3e6_dnruly.jpg",
     name: "Nancy",
     ptag: "This platform amply solved my queries regarding different fields and educational topics. Edu My Nation's consultancy service helped me greatly in planning the education of my sister.",
   },
