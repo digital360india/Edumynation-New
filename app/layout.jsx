@@ -20,6 +20,8 @@ const RootLayout = ({ children }) => (
     </head> */}
     <head>
     <meta name="google-site-verification" content="MomfbjMIvMGCq0OjGaeo1fM8fjZEPkrNpqvwnd1ISIY" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9850183935400740"
+     crossorigin="anonymous"></script>
     </head>
     <body style={{backgroundColor:"white"}}>
         <main className='app  '>
