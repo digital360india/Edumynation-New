@@ -50,7 +50,7 @@ const Footer = () => {
             <div  className="flex flex-col space-y-4">
             <Link href={"/"}>Terms & Condition</Link>
             <Link href={'https://blog.edumynation.com/'} >Blogs</Link>
-            <Link href={'/'} >SiteMap</Link>
+            <Link href={'/sitemap.xml'} >SiteMap</Link>
             </div>
           </div></div>
       </div>
