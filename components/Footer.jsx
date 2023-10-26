@@ -48,7 +48,7 @@ const Footer = () => {
             <Link href={'/About'} >About</Link>
             </div>
             <div  className="flex flex-col space-y-4">
-            <Link href={"/Terms&Condition"}>Terms & Condition</Link>
+            <Link href={"/TermsCondition"}>Terms & Condition</Link>
             <Link href={'https://blog.edumynation.com/'} >Blogs</Link>
             <Link href={'/sitemap.xml'} >SiteMap</Link>
             </div>
