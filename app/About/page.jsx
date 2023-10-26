@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
 
-      <div className="w-screen mt-16 md:mt-24 b   ">
+      <div className="w-[98.8vw] mt-16 md:mt-24 mx-auto   ">
         <div className=" bg-blue-900 flex justify-center ">
           <div className=" bg-white border-b-2 border-grey-800  w-[1200px] px-6">
             {" "}

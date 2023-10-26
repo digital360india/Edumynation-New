@@ -44,11 +44,11 @@ const Footer = () => {
            <div className="flex  gap-10 text-left" > 
            <div className="flex flex-col space-y-4">
             <Link href={'/'} >Home</Link>
-            <Link href={'/'} >Privacy Policies</Link>
+            <Link href={'/PrivacyPolicy'} >Privacy Policies</Link>
             <Link href={'/About'} >About</Link>
             </div>
             <div  className="flex flex-col space-y-4">
-            <Link href={"/"}>Terms & Condition</Link>
+            <Link href={"/Terms&Condition"}>Terms & Condition</Link>
             <Link href={'https://blog.edumynation.com/'} >Blogs</Link>
             <Link href={'/sitemap.xml'} >SiteMap</Link>
             </div>
