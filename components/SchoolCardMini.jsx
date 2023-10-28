@@ -41,7 +41,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
           <div className="w-[350px] lg:w-[380px] mt-4  lg:h-[350px] h-[233.97px] flex items-center  flex-col gap-2 -mb-4">
             <img
               className="w-[320px] lg:w-[380px] lg:h-[230px]  h-[170px] "  data-aos="zoom-in"
-              src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+              src={`https://res.cloudinary.com/edumynation-official/image/upload/v1644649524/${
                 citySlug == "abuDhabi"
                   ? "abu Dhabi"
                   : citySlug == "alain"
@@ -53,7 +53,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
             <div className="flex justify-evenly bg-white  gap-5 ">
               <img
                 className="w-[90px] h-[50px] lg:w-[110px] lg:h-[60px]"
-                src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+                src={`https://res.cloudinary.com/edumynation-official/image/upload/v1644649524/${
                   citySlug == "abuDhabi"
                     ? "abu Dhabi"
                     : citySlug == "alain"
@@ -64,7 +64,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
               />
               <img
                 className="w-[90px] h-[50px] lg:w-[110px] lg:h-[60px]"
-                src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+                src={`https://res.cloudinary.com/edumynation-official/image/upload/v1644649524/${
                   citySlug == "abuDhabi"
                     ? "abu Dhabi"
                     : citySlug == "alain"
@@ -75,7 +75,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
               />
               <img
                 className="w-[90px] h-[50px] lg:w-[110px] lg:h-[60px]"
-                src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+                src={`https://res.cloudinary.com/edumynation-official/image/upload/v1644649524/${
                   citySlug == "abuDhabi"
                     ? "abu Dhabi"
                     : citySlug == "alain"

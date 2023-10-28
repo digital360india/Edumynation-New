@@ -81,21 +81,21 @@ useEffect(()=>{
                 <div>
                   <Carousel infiniteLoop={true} dynamicHeight={false} transitionTime={800} showThumbs={false} >
 
-                  <div> <img src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+                  <div> <img src={`https://res.cloudinary.com/edumynation-official/image/upload/v1644649524/${
                   city == "abuDhabi"
                     ? "abu Dhabi"
                     : city == "alain"
                     ? "Al ain"
                     : city
                 }/H-${school?.Image_Code}.png`} /></div>
-                <div> <img src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+                <div> <img src={`https://res.cloudinary.com/edumynation-official/image/upload/v1644649524/${
                   city == "abuDhabi"
                     ? "abu Dhabi"
                     : city == "alain"
                     ? "Al ain"
                     : city
                 }/G-${school?.Image_Code}.png`} /></div>
-    <div> <img src={`https://res.cloudinary.com/edumynationofficial/image/upload/v1644649524/gallery/${
+    <div> <img src={`https://res.cloudinary.com/edumynation-official/image/upload/v1644649524/${
                   city == "abuDhabi"
                     ? "abu Dhabi"
                     : city == "alain"
