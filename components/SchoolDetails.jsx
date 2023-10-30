@@ -28,16 +28,17 @@ const ReviewCard = ({ userName,userImg,schoolRating, reviewmessage }) => (
       <div>
         <p className="text-lg font-semibold">{userName}</p>
         <div className="flex items-center">
-          <StarRating rating={schoolRating} />
+          <StarRating rating={schoolRating} review={-1}  />
         </div>
       </div>
     </div>
-    <p className="h-24 overflow-y-auto  scrollbar-hide ">{reviewmessage}</p>
+    <p className=" ">{reviewmessage}</p>
   </div>
 );
 
 
 const SchoolDetails = ({school,reviews,city}) => {
+  const [toggle,setToggle]=useState(3);
   // console.log(reviews)
   const [total,setTotal]=useState(0);
   const [starv,setStarv]=useState(5);
@@ -206,19 +207,19 @@ useEffect(()=>{
             </div>
           </section>
 
-          <section className=" py-10">
+          <section className=" py-10" id="ab">
             <div className="container mx-auto px-4">
               <div className="mb-8"><p className="text-2xl font-bold">RATINGS & REVIEWS</p></div>
-              <div className="flex mb-4">
+              {/* <div className="flex mb-4">
              
             
                 <StarRating rating={total} review={-1} />
-              </div>
+              </div> */}
             
-              <p className="mb-4"> {reviews?.length} reviews</p>
+              {/* <p className="mb-4"> {reviews?.length} reviews</p> */}
              
 
-              <div className="rounded-lg mb-4">
+              {/* <div className="rounded-lg mb-4">
                 <p className="text-xl font-semibold mb-2">Rate City School Ajman</p>
                 <div className="flex items-center mb-2"><StarRating rating={starv} review={-1}  /></div>
                 <select  defaultValue={5}   onChange={(e)=>setStarv(e.target.value)} className=" -mt-1 border rounded">
@@ -230,14 +231,20 @@ useEffect(()=>{
                 </select>
                 <br />
                 <textarea className="w-1/3 px-3 mt-1 py-2 border rounded" rows="1" placeholder="Write your review..." />
-              </div>
-              <button className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-full">Submit</button>
+              </div> */}
+              <button className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-full" >Write a review</button>
 
-              <div className="flex gap-6 mt-8 w-full   overflow-scroll scrollbar-hide ">
+              <div className=" block sm:flex    sm:flex-wrap "  >
                 {reviews.map((review, index) => (
-                  <ReviewCard key={index} {...review} />
+                        (index<toggle)&&
+                  <div className=' w-full  sm:w-1/2  '>       
+                             <ReviewCard key={index} {...review} />
+                  </div>
                 ))}
+               
               </div>
+              {toggle===3?<button className=' text-xl font-semibold' onClick={()=>setToggle(reviews?.length)}> Read More...</button>:<button className=' text-xl font-semibold' onClick={()=>setToggle(3)} ><a href="#ab">Read Less...</a></button>}
+
              
             </div>
           </section>
