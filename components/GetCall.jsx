@@ -7,7 +7,7 @@ import {
   DialogFooter,
 } from "@material-tailwind/react";
 import { Input } from "@material-tailwind/react";
-import { base } from "@/api/airtable";
+import { base } from "@/app/api/auth/airtable";
 
 const GetCall = ({ open, setOpen, schoolName,school }) => {
   const [name, setName] = useState("");

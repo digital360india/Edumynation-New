@@ -2,7 +2,7 @@ import Testimonials from "@/components/Testimonial";
 import ListingHero from "@/components/ListingHero";
 import SchoolCard from "@/components/SchoolCard";
 import Faq from "@/components/Faq";
-import { base } from "@/api/airtable.jsx";
+import { base } from "@/app/api/auth/airtable.jsx";
 async function get(params) {
   const categoryData = await base("category 2")
     .select({

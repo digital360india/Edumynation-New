@@ -7,7 +7,7 @@ import { FaGraduationCap } from "react-icons/fa";
 // import "../components/SchoolCardCss.css";
 import { Line } from "rc-progress";
 import FormList from "@/components/Form/FormList";
-import { base } from "@/api/airtable.jsx";
+import { base } from "@/app/api/auth/airtable.jsx";
 import { useState } from "react";
 import { useEffect } from "react";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";

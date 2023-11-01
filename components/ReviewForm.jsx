@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';  
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import { baseRe } from '@/api/airtable';
+import { baseRe } from '@/app/api/auth/airtable';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import StarRatings from 'react-star-ratings';

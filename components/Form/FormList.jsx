@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
-import { base } from "@/api/airtable";
+import { base } from "@/app/api/auth/airtable";
 
 const FormList = () => {
   const [details, setDetails] = useState({

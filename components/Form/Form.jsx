@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { base } from "../../api/airtable";
+import { base } from "../../app/api/auth/airtable";
 // import createEnquireForm from "../api/createEnquireForm";
 import { useRouter } from "next/router";
 

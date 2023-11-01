@@ -1,5 +1,5 @@
 import SchoolDetails from '@/components/SchoolDetails'
-import { base, baseRe } from "@/api/airtable";
+import { base, baseRe } from "@/app/api/auth/airtable";
 const data=[];
 let id;
 async function get(params)
