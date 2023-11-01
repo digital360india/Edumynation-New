@@ -1,6 +1,7 @@
 import SchoolDetails from '@/components/SchoolDetails'
 import { base, baseRe } from "@/api/airtable";
 const data=[];
+let id;
 async function get(params)
 {
   const schoolData = await base(params[0])
@@ -9,6 +10,7 @@ async function get(params)
      })
      .all()
      .then((value) => {
+      id=value[0]?.id;
        return value[0]?.fields;
      });
      return schoolData;
@@ -91,7 +93,7 @@ export default async function SchoolPage({params}) {
     <meta property="website:publisher" content="https://www.facebook.com/edumynation/"/>
     </head>
     <div className=''>
-      <SchoolDetails school={schoolData} reviews={data} city={params.slug[0]} />
+      <SchoolDetails id={id} school={schoolData} reviews={data} city={params.slug[0]} />
    </div>
     </>
   );

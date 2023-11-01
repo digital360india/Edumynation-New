@@ -1,4 +1,5 @@
 import './globals.css'
+import Authprovider from '@/components/Authprovider/Authprovider';
 import { Inter } from 'next/font/google'
 import Navbar from "@/components/Navbar";
 import Footer from '@/components/Footer';
@@ -24,11 +25,13 @@ const RootLayout = ({ children }) => (
      crossorigin="anonymous"></script>
     </head>
     <body style={{backgroundColor:"white"}}>
+    <Authprovider>
         <main className='app  '>
           <Navbar />
           {children}
           <Footer />
         </main>
+        </Authprovider>
     </body>
   </html>
 );

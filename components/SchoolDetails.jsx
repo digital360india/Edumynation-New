@@ -1,6 +1,7 @@
 'use client'
 
 import AOS from 'aos';
+import { signIn,useSession } from 'next-auth/react';
 import 'aos/dist/aos.css';
 AOS.init();
 
@@ -16,6 +17,7 @@ import {BsPersonFillGear} from "react-icons/bs";
 import { HiAcademicCap } from "react-icons/hi";
 import {AiOutlinePieChart} from "react-icons/ai";
 import Testimonials from "./Testimonial";
+import ReviewForm from './ReviewForm';
 
 const ReviewCard = ({ userName,userImg,schoolRating, reviewmessage }) => (
   <div className="p-4 rounded-lg mb-4">
@@ -37,18 +39,24 @@ const ReviewCard = ({ userName,userImg,schoolRating, reviewmessage }) => (
 );
 
 
-const SchoolDetails = ({school,reviews,city}) => {
+const SchoolDetails = ({school,reviews,city,id}) => {
+   const [toggle1,setToggle1]=useState(false);
+   const session= useSession(); 
   const [toggle,setToggle]=useState(3);
-  // console.log(reviews)
-  const [total,setTotal]=useState(0);
-  const [starv,setStarv]=useState(5);
-useEffect(()=>{
-  let total1=0;
-  reviews.map((r)=>{
-    total1+=r.schoolRating/reviews.length;
-  })
-  setTotal(total1);
-},[])
+  const [starv,setStarv]=useState("select");
+
+function handle()
+{
+  console.log(session?.status)
+  if(session?.status=="authenticated")
+  {
+  setToggle1(true);
+  }
+else{
+  signIn('google');
+}
+}
+
   return (
     <>
      
@@ -232,18 +240,33 @@ useEffect(()=>{
                 <br />
                 <textarea className="w-1/3 px-3 mt-1 py-2 border rounded" rows="1" placeholder="Write your review..." />
               </div> */}
-              <button className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-full" >Write a review</button>
-
+              <button onClick={handle} className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-full" >Write a review</button> <br />
+              <ReviewForm toggle1={toggle1} id={id} school={school} user={session?.data?.user} setToggle1={setToggle1} />
+              {/* <select   onChange={(e)=>
+                {
+                  console.log(e.target.value)
+                setStarv(e.target.value)}} className=" ml-2 pl-2 border border-black  rounded">
+                
+                  <option value="select">select</option>
+                  <option value={1}>1</option>
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                  <option value={5}>5</option>
+                </select> */}
               <div className=" block sm:flex    sm:flex-wrap "  >
                 {reviews.map((review, index) => (
-                        (index<toggle)&&
-                  <div className=' w-full  sm:w-1/2  '>       
+                
+                        (index<toggle )&&
+                      
+                  <div className=' w-full  sm:w-1/2  '>
+                    {/* {review?.schoolRating}        */}
                              <ReviewCard key={index} {...review} />
                   </div>
                 ))}
                
               </div>
-              {toggle===3?<button className=' text-xl font-semibold' onClick={()=>setToggle(reviews?.length)}> Read More...</button>:<button className=' text-xl font-semibold' onClick={()=>setToggle(3)} ><a href="#ab">Read Less...</a></button>}
+              {toggle===3?<button className=' mt-3 text-xl font-semibold' onClick={()=>setToggle(reviews?.length)}> Read More...</button>:<button className=' mt-3 text-xl font-semibold' onClick={()=>setToggle(3)} ><a href="#ab">Read Less...</a></button>}
 
              
             </div>
@@ -251,6 +274,7 @@ useEffect(()=>{
             
         </div>
         <Testimonials /> 
+      
    
     </>
   );
