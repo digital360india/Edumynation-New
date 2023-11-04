@@ -64,12 +64,12 @@ const FormList = ({selectremove}) => {
   };
   return (
     <>
-      <div className="lg:w-[400px]  w-[350px] rounded-t-3xl bg-[#2F3F93] relatuve z-10 h-20 pt-2">
+      <div className="lg:w-[400px]  w-[330px] rounded-t-3xl bg-[#2F3F93]  h-20 pt-2">
         <p className="text-white text-center text-[19px] ">
           Confuse About Which School <br /> To Choose?
         </p>
       </div>
-      <div className="bg-white border-[1px] border-white shadow-2xl w-[350px] lg:w-[400px] rounded-b-3xl">
+      <div className="bg-white border-[1px] border-white shadow-2xl w-[330px] lg:w-[400px] rounded-b-3xl">
         <p className="text-center  text-black text-[15px] pt-3">
           Fill this form to get in touch with our counsellor.
         </p>
