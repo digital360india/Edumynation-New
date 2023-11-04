@@ -3,6 +3,7 @@ import Authprovider from '@/components/Authprovider/Authprovider';
 import { Inter } from 'next/font/google'
 import Navbar from "@/components/Navbar";
 import Footer from '@/components/Footer';
+import Popup1 from '@/components/Popup1';
 const inter = Inter({ subsets: ['latin'] })
 
 export async function generateMetadata()
@@ -28,6 +29,7 @@ const RootLayout = ({ children }) => (
     <Authprovider>
         <main className='app  '>
           <Navbar />
+          <Popup1/>
           {children}
           <Footer />
         </main>
