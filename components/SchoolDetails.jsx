@@ -20,7 +20,7 @@ import Testimonials from "./Testimonial";
 import ReviewForm from './ReviewForm';
 
 const ReviewCard = ({ userName,userImg,schoolRating, reviewmessage }) => (
-  <div className="p-4 rounded-lg mb-4">
+  <div className="p-4 rounded-lg mb-4   ">
     <div className="flex items-center mb-2">
       <img
         className="w-8 h-8 rounded-full mr-2"
@@ -45,7 +45,7 @@ const SchoolDetails = ({school,reviews,city,id}) => {
   const [toggle,setToggle]=useState(3);
   const [starv,setStarv]=useState("select");
 
-function handle()
+ function handle()
 {
   console.log(session?.status)
   if(session?.status=="authenticated")
@@ -53,7 +53,7 @@ function handle()
   setToggle1(true);
   }
 else{
-  signIn('google');
+   signIn('google');
 }
 }
 
@@ -68,7 +68,7 @@ else{
                 'url("https://cdn.discordapp.com/attachments/1078905801017659432/1111914564183932938/Rectangle_297.png")',
             }}
           >
-            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 ">
+            <div className="absolute inset-0 flex justify-center items-center bg-transparent bg-opacity-50 ">
               <div className="text-white text-center flex flex-col items-center space-y-6">
                 <h1 className="text-4xl font-bold mb-4">{school?.name}</h1>
                 {/* <Link href={/} className="bg-[#2F3F93] text-white px-4 py-2 mb-4 rounded-lg">Enquire Now</Link> */}

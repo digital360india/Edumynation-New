@@ -17,7 +17,13 @@ const FormList = () => {
   const [btn, setbtn] = useState(false);
 
   const createCounsellorForm = () => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i; 
+    const mobileNumberRegex = /^\d{10}$/;
     setbtn(true);
+    if(details.name.trim().length>3 && mobileNumberRegex.test(details.phoneNumber)  && emailRegex.test(details.email) && details.class!="" &&
+    details.board!="" )
+    {
+      console.log("heelo");
     base("counsellorForm").create(
       [
         {
@@ -50,10 +56,15 @@ const FormList = () => {
         });
       }
     );
+  }
+  else{
+    setMsg("*All Fields Are Mandatory")
+    setbtn(false);
+  }
   };
   return (
     <>
-      <div className="lg:w-[400px]  w-[350px] rounded-t-3xl bg-[#2F3F93] h-20 pt-2">
+      <div className="lg:w-[400px]  w-[350px] rounded-t-3xl bg-[#2F3F93] relatuve z-10 h-20 pt-2">
         <p className="text-white text-center text-[19px] ">
           Confuse About Which School <br /> To Choose?
         </p>
@@ -64,7 +75,7 @@ const FormList = () => {
         </p>
         <div className="flex flex-col justify-center items-center gap-4 mt-5">
           <input
-            className="lg:w-[350px] w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+            className="lg:w-[350px] text-black w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
             type="text"
             placeholder=" Full Name*"
             value={details.name}
@@ -73,7 +84,7 @@ const FormList = () => {
             }
           />
           <input
-            className="lg:w-[350px] w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+            className="lg:w-[350px] text-black  w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
             type="number"
             placeholder=" Mobile number*"
             value={details.phoneNumber}
@@ -82,7 +93,7 @@ const FormList = () => {
             }
           />
           <input
-            className="lg:w-[350px] w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+            className="lg:w-[350px] text-black   w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
             type="Email"
             placeholder=" Email ID*"
             value={details.email}
@@ -92,9 +103,10 @@ const FormList = () => {
           />
         </div>
 
-        <div className="flex flex-row text-black items-center justify-center lg:gap-7 gap-7 mt-3">
+        <div className="flex flex-row text-black items-center justify-center    mt-3">
+          <div>
           <select
-            className="lg:w-[100px] w-[80px]  h-12 shadow-2xl border-[1px] border-[#909090] outline-none "
+            className="lg:w-[100px] w-[80px]   h-12 shadow-2xl border-[1px] border-[#909090] outline-none "
             name="cars"
             id="cars"
             defaultValue={details.class}
@@ -116,7 +128,7 @@ const FormList = () => {
             onChange={(value) =>
               setDetails({ ...details, board: value.target.value })
             }
-            className="lg:w-[100px] w-[80px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+            className="lg:w-[100px] w-[80px] h-12 shadow-2xl ml-1 border-[1px] border-[#909090] outline-none"
             name="cars"
             id="cars"
           >
@@ -136,9 +148,10 @@ const FormList = () => {
             <option value="Class">All-Schools</option>
           
           </select>`
+          </div>
         </div>
         <div className="text-center mt-3">
-          <span className="text-[#2F3F93]">{msg}</span>
+          <span className="text-red-800">{msg}</span>
         </div>
 
         <div className="mt-3 pb-7 lg:w-[400px] w-[350px] text-center">
