@@ -8,7 +8,7 @@ export default function Popup1() {
     useEffect(()=>{
       const interval=setInterval(() => {
         setToggle(true);
-    }, 5000);
+    }, 30000);
     return ()=>clearInterval(interval)
     },[toggle])
   return (
