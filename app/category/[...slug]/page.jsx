@@ -3,6 +3,8 @@ import ListingHero from "@/components/ListingHero";
 import SchoolCard from "@/components/SchoolCard";
 import Faq from "@/components/Faq";
 import { base } from "@/app/api/auth/airtable.jsx";
+import Article1 from "@/components/Article1";
+
 async function get(params) {
   const categoryData = await base("category 2")
     .select({
@@ -94,6 +96,7 @@ export default async function ListingPage({ params }) {
       <div className="bg-white">
         <ListingHero categoryData={categoryData}></ListingHero>
         <SchoolCard categoryData={categoryData} />
+     <Article1 art={categoryData?.article} />
         <Faq categoryData={categoryData} />
         <Testimonials />
       </div>

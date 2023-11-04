@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 import { base } from "@/app/api/auth/airtable";
 
-const FormList = () => {
+const FormList = ({selectremove}) => {
   const [details, setDetails] = useState({
     name: "",
     phoneNumber: "",
@@ -103,6 +103,7 @@ const FormList = () => {
           />
         </div>
 
+        {selectremove!="yes"&&
         <div className="flex flex-row text-black items-center justify-center    mt-3">
           <div>
           <select
@@ -149,7 +150,7 @@ const FormList = () => {
           
           </select>`
           </div>
-        </div>
+        </div>}
         <div className="text-center mt-3">
           <span className="text-red-800">{msg}</span>
         </div>

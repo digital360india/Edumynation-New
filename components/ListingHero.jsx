@@ -1,9 +1,15 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react"; 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import { FiPhoneCall } from "react-icons/fi";
+import { Autoplay, Navigation } from 'swiper/modules';
 import Link from "next/link";
 import styled from "styled-components";
-
+import FormList from "./Form/FormList";
 const ArticleSection = styled.article`
   width: 95%;
   margin: auto;
@@ -22,8 +28,8 @@ const ArticleSection = styled.article`
 `;
 
 const ListingHero = ({ categoryData }) => {
-
-    // console.log(categoryData?.article)
+ 
+    console.log(categoryData)
   const [btn, setbtn] = useState(true);
   const [art, setArt] = useState("");
 
@@ -94,11 +100,39 @@ const ListingHero = ({ categoryData }) => {
 
 
 
-      <div className="sm:hidden pl-2 mt-10">
-        <img src="https://cdn.discordapp.com/attachments/1078905801017659432/1122106772895830056/Group_369.png" alt="ad" />
+      <div className=" block sm:hidden pl-2 mt-10 w-[90vw] mx-auto ">
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {
+  categoryData?.banImg.map((v)=>
+  <>
+  <SwiperSlide>
+    <img src={v?.url} className=" w-[80vw] h-[150px] " alt="" />
+  </SwiperSlide>
+  </>
+  )
+}
+      </Swiper>
+      <div className=" mt-10 block sm:hidden w-[90vw] mx-auto ">
+      <FormList selectremove="yes" />
       </div>
 
-      <div className="flex bg-white  justify-center px-10 mt-12">
+     
+      </div>
+
+      <div className=" hidden sm:flex  bg-white  justify-center px-10 mt-12">
 
         <ArticleSection>
           {isReadMoreShown ? (
