@@ -28,8 +28,8 @@ const ArticleSection = styled.article`
 `;
 
 const ListingHero = ({ categoryData }) => {
- 
-    console.log(categoryData)
+//  const url=
+    console.log(categoryData?.bandesktopImg[0].url)
   const [btn, setbtn] = useState(true);
   const [art, setArt] = useState("");
 
@@ -50,13 +50,13 @@ const ListingHero = ({ categoryData }) => {
     <>
      <div className="lg:h-[500px] h-[350px]  bg-contain bg-no-repeat w-full hidden sm:flex sm:flex-col">
         <img
-          src="https://cdn.discordapp.com/attachments/1078905801017659432/1111914564183932938/Rectangle_297.png"
+          src={categoryData?.bandesktopImg[0].url}
           className="absolute  top-0 left-0 right-0 lg:h-[500px] h-[400px] w-full  hidden sm:flex md:mt-24  "
         />
-         <img
+         {/* <img
           src="https://cdn.discordapp.com/attachments/1078905801017659432/1122111764633501747/Rectangle_8.png"
           className="absolute top-0 left-0 right-0  h-[650px] w-full  mt-16 block sm:hidden "
-        />
+        /> */}
         <div className=" relative z-10 flex justify-center lg:mt-20 mt-32 flex-col gap-3 pt-20 items-center text-center">
           <p className="text-white text-2xl lg:text-3xl font-bold">
             FIND THE BEST <span className="text-[#2F3F93]"> SCHOOLS</span> IN{" "}
