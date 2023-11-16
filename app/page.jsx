@@ -35,7 +35,7 @@ export default function Home() {
         <div className="absolute inset-0 flex justify-center items-center  bg-opacity-50">
           <div className="text-white text-center">
             <p className="text-4xl font-bold"> 
-            <TypewriterComponent options={{ autoStart: true, loop: true, delay: 50,strings: "Find The Best School In <br /> Seconds !", }}/> 
+            <TypewriterComponent options={{ autoStart: true, loop: true, delay: 60,strings: "Find The Best School In <br /> Seconds !", }}/> 
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function Home() {
       </div>
       </div>
       <DetailCard/>
-      <DetailMobCard/>
+      {/* <DetailMobCard/> */}
        <ImgSlider/>
       <ImgSliderMob/>
       <Form/>

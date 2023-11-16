@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="px-14 text-white ">
           <div><p className="text-white text-[30px]  font-5xl font-semibold mt-4  mb-4 text-center sm:text-left"> Contact</p></div>
             <div className=" flex items-center gap-3 mb-4 text-[14px]">
-              <GoLocation  className="text-xl"/><p>903, Saeed Tower-1, Sheikh Zayed Road, Dubai, UAE</p>
+              <GoLocation  className="text-[60px] sm:text-xl "/><p>903, Saeed Tower-1, Sheikh Zayed Road, Dubai, UAE</p>
             </div>
             <div className="flex items-center gap-3 mb-4  text-[14px] ">
               <FiPhone className="text-xl" /><Link href="tel:+971 56 822 8740" target="_blank">+971 52 102 6963</Link>

@@ -75,19 +75,19 @@ export default async function ListingPage({ params }) {
         defer={true}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: categoryData.schema,
+            __html: categoryData?.schema,
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: categoryData.schema2,
+            __html: categoryData?.schema2,
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: categoryData.schema3,
+            __html: categoryData?.schema3,
           }}
         />
       </head>

@@ -65,12 +65,12 @@ const dataSec = [
 
 const ImgSliderMob = () => {
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden  mt-20 ">
       <h1 className="text-2xl text-center mt-10 text-[#2F3F93] font-semibold">
         SCHOOLS BY CITIES
       </h1>
 <div className="flex justify-center">
-      <div className="flex  overflow-x-scroll scrollbar-hide gap-5 px-12 py-16 w-full">
+      <div className="flex  overflow-x-scroll overflow-y-hidden scrollbar-hide gap-5 px-4 py-10 w-full">
         {data.map((items) => {
           return (
             <Link href={`/category/${items.city}`}>
@@ -91,11 +91,11 @@ const ImgSliderMob = () => {
       </div>
       </div>
 
-      <h1 className="text-2xl text-center mt-10 text-[#2F3F93] font-semibold">
+      <h1 className="text-2xl text-center mt-2 text-[#2F3F93] font-semibold">
         FEATURED SCHOOLS
       </h1>
 
-      <div className="flex  overflow-x-scroll scrollbar-hide gap-5 mt-8  mb-10 px-12 py-16 w-full">
+      <div className="flex  overflow-x-scroll overflow-y-hidden scrollbar-hide gap-5 mt-8  mb-10 px-4 py-10 w-full">
         {dataSec.map((items) => {
           return (
             <>

@@ -75,7 +75,7 @@ const FormList = ({selectremove}) => {
         </p>
         <div className="flex flex-col justify-center items-center gap-4 mt-5">
           <input
-            className="lg:w-[350px] text-black w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+            className="lg:w-[350px] text-black w-[300px] h-12 rounded-md bg-[#faf7f7]"
             type="text"
             placeholder=" Full Name*"
             value={details.name}
@@ -84,7 +84,7 @@ const FormList = ({selectremove}) => {
             }
           />
           <input
-            className="lg:w-[350px] text-black  w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+            className="lg:w-[350px] text-black  w-[300px] h-12  rounded-md bg-[#faf7f7]"
             type="number"
             placeholder=" Mobile number*"
             value={details.phoneNumber}
@@ -93,7 +93,7 @@ const FormList = ({selectremove}) => {
             }
           />
           <input
-            className="lg:w-[350px] text-black   w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+            className="lg:w-[350px] text-black   w-[300px] h-12 rounded-md bg-[#faf7f7]"
             type="Email"
             placeholder=" Email ID*"
             value={details.email}
@@ -105,9 +105,9 @@ const FormList = ({selectremove}) => {
 
         {selectremove!="yes"&&
         <div className="flex flex-row text-black items-center justify-center    mt-3">
-          <div>
+          <div className="space-x-2">
           <select
-            className="lg:w-[100px] w-[80px]   h-12 shadow-2xl border-[1px] border-[#909090] outline-none "
+            className="lg:w-[100px] w-[80px]   h-12 rounded-md bg-[#faf7f7] "
             name="cars"
             id="cars"
             defaultValue={details.class}
@@ -129,7 +129,7 @@ const FormList = ({selectremove}) => {
             onChange={(value) =>
               setDetails({ ...details, board: value.target.value })
             }
-            className="lg:w-[100px] w-[80px] h-12 shadow-2xl ml-1 border-[1px] border-[#909090] outline-none"
+            className="lg:w-[100px] w-[80px] h-12 rounded-md bg-[#faf7f7]"
             name="cars"
             id="cars"
           >
@@ -140,15 +140,15 @@ const FormList = ({selectremove}) => {
             <option value="Gcse">Gcse</option>
             <option value="Cie">Cie</option>
           </select>
-          `<select
-            className="lg:w-[100px] w-[80px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+          {/* `<select
+            className="lg:w-[100px] w-[80px] h-12 rounded-md bg-[#faf7f7]"
             name="cars"
             id="cars"
             defaultValue="Type Of School"
           >
             <option value="Class">All-Schools</option>
           
-          </select>`
+          </select>` */}
           </div>
         </div>}
         <div className="text-center mt-3">

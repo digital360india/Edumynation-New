@@ -60,7 +60,7 @@ const Form = ({ color }) => {
         !color
           ? "bg-[url('https://cdn.discordapp.com/attachments/1078905801017659432/1110793183572545566/Rectangle_11.png')]"
           : ""
-      } h-[550px] w-full bg-cover flex items-center justify-center md:justify-start md:items-start md:pl-16`}
+      } h-[550px] w-full     bg-right-bottom    bg-cover   flex items-center justify-center md:justify-start md:items-start md:pl-16`}
     >
       <div className="lg:w-[446px] w-[350px] h-[514px]  pt-12  flex flex-col ">
         <div className="lg:w-[400px]  w-[350px] rounded-t-3xl bg-[#2F3F93] h-20 pt-2">
@@ -73,13 +73,13 @@ const Form = ({ color }) => {
             <p className="text-center  text-black text-[15px] pt-3">
               Fill this form to get in touch with our counsellor.
             </p>
-            <div className="flex flex-col justify-center items-center gap-4 mt-5">
+            <div className="flex flex-col justify-center  items-center gap-4 mt-5">
               <input
                 value={details.name}
                 onChange={(value) =>
                   setDetails({ ...details, name: value.target.value })
                 }
-                className="lg:w-[350px] w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+                className="lg:w-[350px] px-1 rounded-md bg-[#faf7f7] w-[300px] h-12  outline-none"
                 type="text"
                 placeholder=" Full Name*"
               />
@@ -88,7 +88,7 @@ const Form = ({ color }) => {
                 onChange={(value) =>
                   setDetails({ ...details, phoneNumber: value.target.value })
                 }
-                className="lg:w-[350px] w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+                className="lg:w-[350px] rounded-md bg-[#faf7f7] px-1 w-[300px] h-12  outline-none"
                 type="number"
                 placeholder=" Mobile number*"
               />
@@ -97,7 +97,7 @@ const Form = ({ color }) => {
                 onChange={(value) =>
                   setDetails({ ...details, email: value.target.value })
                 }
-                className="lg:w-[350px] w-[300px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+                className="lg:w-[350px] rounded-md bg-[#faf7f7] px-1 w-[300px] h-12  outline-none"
                 type="Email"
                 placeholder=" Email ID*"
               />
@@ -109,7 +109,7 @@ const Form = ({ color }) => {
                 onChange={(value) =>
                   setDetails({ ...details, class: value.target.value })
                 }
-                className="lg:w-[100px] w-[80px]  h-12 shadow-2xl border-[1px] border-[#909090] outline-none "
+                className="lg:w-[100px] rounded-md bg-[#faf7f7] px-1 w-[80px]  h-12  outline-none "
               >
                 <option value="Class">Class</option>
                 <option value="8th">8th</option>
@@ -124,7 +124,7 @@ const Form = ({ color }) => {
                 onChange={(value) =>
                   setDetails({ ...details, board: value.target.value })
                 }
-                className="lg:w-[100px] w-[80px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+                className="lg:w-[100px] rounded-md w-[80px] h-12 bg-[#faf7f7]  outline-none"
                 name="cars"
                 id="cars"
               >
@@ -136,14 +136,14 @@ const Form = ({ color }) => {
                 <option value="igcse">Igcse</option>
                 <option value="cie">Cie </option>
               </select>
-              <select
-                className="lg:w-[100px] w-[80px] h-12 shadow-2xl border-[1px] border-[#909090] outline-none"
+              {/* <select
+                className="lg:w-[100px] w-[80px] h-12  outline-none"
                 name="cars"
                 id="cars"
                 defaultValue="All-Schools"
               >
                 <option value="All-Schools">All-Schools</option>
-              </select>
+              </select> */}
             </div>
             <div className="text-center mt-3">
               <span className="text-[#2F3F93]">{msg}</span>
