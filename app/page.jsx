@@ -34,8 +34,8 @@ export default function Home() {
         }}>
         <div className="absolute inset-0 flex justify-center items-center  bg-opacity-50">
           <div className="text-white text-center">
-            <p className="text-4xl font-bold"> 
-            <TypewriterComponent options={{ autoStart: true, loop: true, delay: 60,strings: "Find The Best School In <br /> Seconds !", }}/> 
+            <p className="text-4xl px-6 sm:px-0 font-bold"> 
+            <TypewriterComponent options={{ autoStart: true,loop:true, delay: 60,strings: "Find The Best School In Seconds !", }}/> 
             </p>
           </div>
         </div>
