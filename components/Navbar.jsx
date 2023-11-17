@@ -66,8 +66,8 @@ const Navbar = () =>  {
           <Link href={'/About'} >About</Link>
           <Link href={'/contact'}>Contact</Link>
             <Link href="https://blog.edumynation.com/" target="_blank" className="font-medium">Blogs</Link>
-            <Link href={'/'} >Privacy Policies</Link>
-            <Link href={'/'} >Terms & Conditions</Link>
+            <Link href={'/PrivacyPolicy'} >Privacy Policies</Link>
+            <Link href={'/TermsCondition'} >Terms & Conditions</Link>
             <Link href={'/'} >Registered School</Link>
             <Link href={'/'} >Terms & Conditions For School</Link>
           </div>

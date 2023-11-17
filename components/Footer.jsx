@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#2F3F93] mt-2 text-center">
+    <div className="w-full bg-[#2F3F93]  text-center">
       <div className="block sm:flex justify-around p-16">
 
         <div className="flex flex-col gap-4 lg:w-80 justify-center text-center items-center pt-5  ">
@@ -26,10 +26,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="px-14 text-white ">
+        <div className="px-7 text-white ">
           <div><p className="text-white text-[30px]  font-5xl font-semibold mt-4  mb-4 text-center sm:text-left"> Contact</p></div>
             <div className=" flex items-center gap-3 mb-4 text-[14px]">
-              <GoLocation  className="text-[60px] sm:text-xl "/><p>903, Saeed Tower-1, Sheikh Zayed Road, Dubai, UAE</p>
+              <GoLocation  className=" text-4xl sm:text-xl "/><p className="text-left">903, Saeed Tower-1, Sheikh Zayed Road, Dubai, UAE</p>
             </div>
             <div className="flex items-center gap-3 mb-4  text-[14px] ">
               <FiPhone className="text-xl" /><Link href="tel:+971 56 822 8740" target="_blank">+971 52 102 6963</Link>
