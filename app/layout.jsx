@@ -1,4 +1,7 @@
 import './globals.css'
+
+import 'react-multi-carousel/lib/styles.css';
+
 import Authprovider from '@/components/Authprovider/Authprovider';
 import { Inter } from 'next/font/google'
 import Navbar from "@/components/Navbar";
