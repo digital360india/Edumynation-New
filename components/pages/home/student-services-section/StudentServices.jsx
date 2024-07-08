@@ -33,20 +33,22 @@ export default function StudentServices() {
 
   return (
     <section id="student-services" className="flex flex-col items-center gap-5 px-5 py-5">
-      <h2 className="px-2 text-3xl text-primaryBlue font-semibold">
+      <h2 className="text-3xl text-primaryBlue font-semibold">
         Comprehensive Student Services
       </h2>
 
-      <Carousel
+      {/* <Carousel
         responsive={responsive}
         keyBoardControl
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
         itemClass="px-2"
-      >
+      > */}
+      <ul className="services-cont flex flex-col gap-5 md:flex-row">
         {services.map(service => 
           <Service key={service.id} service={service}/>
         )}
-      </Carousel>
+      </ul>
+      {/* </Carousel> */}
     </section>
   );
 }
