@@ -1,15 +1,15 @@
 /* React Multi-Carousel */
 
 export function getCarouselResponsive({
-  desktopItems = 3,
-  desktopSlidesToSlide = 1,
   desktopBreakpoint = { max: 3000, min: 1024 },
-  tabletItems = 2,
-  tabletSlidesToSlide = 1,
+  desktopSlidesToSlide = 1,
+  desktopItems = 3,
   tabletBreakpoint = { max: 1024, min: 640 },
-  mobileItems = 1,
+  tabletSlidesToSlide = 1,
+  tabletItems = 2,
+  mobileBreakpoint = { max: 640, min: 0 },
   mobileSlidesToSlide = 1,
-  mobileBreakpoint = { max: 640, min: 0 }
+  mobileItems = 1
 } = {}) {
   
   return {
