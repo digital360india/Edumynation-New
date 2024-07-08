@@ -6,8 +6,8 @@ export default function SearchBox() {
   return (
     <div className="search-box bg-white rounded-xl px-5 py-1">
       <form onSubmit={event => event.preventDefault()}>
-        <div className="school-select  flex flex-col items-center justify-center ">
-          <div className="input-group flex items-center">
+        <div className="school-select flex flex-col items-center justify-center md:flex-row">
+          <div className="input-group w-[30%] flex items-center">
             <Icon icon="solar:home-2-linear"/>
             <input 
               className="ps-5 pe-3 py-3"

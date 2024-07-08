@@ -5,7 +5,7 @@ import School from "./components/School";
 import { getCarouselResponsive } from "@/utilities/functions/pages/home/functions";
 
 
-const responsive = getCarouselResponsive();
+const responsive = getCarouselResponsive({ mobileItems: 2 });
 
 const schools = [
   {
@@ -41,7 +41,7 @@ const schools = [
 export default function FeaturedSchools() {
 
   return (
-    <section id="featured-schools" className="flex flex-col gap-10 px-5 py-5 bg-primaryLight">
+    <section id="featured-schools" className="flex flex-col gap-10 px-3 py-5 bg-primaryLight">
       <h2 className="px-2 text-3xl font-semibold text-primaryBlue">
         Featured Schools
       </h2>
@@ -49,7 +49,7 @@ export default function FeaturedSchools() {
         responsive={responsive}
         keyBoardControl
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-        itemClass="px-2"   
+        itemClass="px-2 rounded-lg"
       >
         {schools.map(school =>
           <School key={school.id} school={school}/>

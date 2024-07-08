@@ -29,7 +29,7 @@ const cities = [
 export default function SchoolByCities() {
 
   return (
-    <section id="school-by-cities" className="flex flex-col gap-7 px-5 py-5 bg-secondaryLight">
+    <section id="school-by-cities" className="flex flex-col gap-7 px-3 py-5 bg-secondaryLight">
       <h1 className="px-2 text-3xl text-primaryBlue font-semibold">
         School by Cities
       </h1>
@@ -38,7 +38,7 @@ export default function SchoolByCities() {
         responsive={responsive}
         keyBoardControl
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-        itemClass="px-2 rounded-lg"
+        itemClass="px-2 "
       >
         {cities.map(city => 
           <City key={city.id} city={city}/>

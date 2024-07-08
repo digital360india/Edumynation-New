@@ -58,8 +58,8 @@ const resources = [
 export default function Resources() {
 
   return (
-    <section id="resources" className="flex flex-col gap-5 px-5 py-5">
-      <h2 className="px-2 text-3xl font-semibold text-primaryBlue">
+    <section id="resources" className="flex flex-col gap-5 py-5">
+      <h2 className="px-5 text-3xl font-semibold text-primaryBlue">
         Essential Resources for Students
       </h2>
       
@@ -67,7 +67,7 @@ export default function Resources() {
         responsive={responsive}
         keyBoardControl
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-        itemClass="p-5 border-x-8 border-white bg-primaryLight"
+        itemClass="p-5 border-x-[1.25rem] border-white bg-primaryLight"
       >
         {resources.map(resource => (
           <Resource key={resource.id} resource={resource}/>
