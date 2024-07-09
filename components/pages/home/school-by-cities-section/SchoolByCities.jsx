@@ -5,7 +5,7 @@ import City from "./components/City";
 import { getCarouselResponsive } from "@/utilities/functions/pages/home/functions";
 
 
-const responsive = getCarouselResponsive({ mobileItems: 2 });
+const responsive = getCarouselResponsive({ desktopItems: 4, tabletItems: 3, mobileItems: 2 });
 
 const cities = [
   {
@@ -22,15 +22,25 @@ const cities = [
     id: 3,
     cityName: "Banglore",
     image: "/pages/home/school-by-cities-section/city-3.png"
-  }
+  },
+  {
+    id: 4,
+    cityName: "Chandigarh",
+    image: "/pages/home/school-by-cities-section/city-1.png"
+  },
+  {
+    id: 5,
+    cityName: "Gurugram",
+    image: "/pages/home/school-by-cities-section/city-2.png"
+  },
 ];
 
 
 export default function SchoolByCities() {
 
   return (
-    <section id="school-by-cities" className="flex flex-col gap-7 px-3 py-5 bg-secondaryLight">
-      <h1 className="px-2 text-3xl text-primaryBlue font-semibold">
+    <section id="school-by-cities" className="flex flex-col gap-7 px-3 py-5 bg-secondaryLight lg:px-7 xl:px-9">
+      <h1 className="text-3xl text-primaryBlue font-semibold">
         School by Cities
       </h1>
       
@@ -38,7 +48,7 @@ export default function SchoolByCities() {
         responsive={responsive}
         keyBoardControl
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-        itemClass="px-2 "
+        itemClass="px-2 h-[50vw] sm:h-[35vw] lg:h-[25vw] xl:h-[25vw] 2xl:h-[400px]"
       >
         {cities.map(city => 
           <City key={city.id} city={city}/>
