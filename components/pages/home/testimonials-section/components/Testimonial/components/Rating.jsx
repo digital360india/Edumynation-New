@@ -1,4 +1,5 @@
-import Star from "@/assets/pages/home/testimonials-section/ratings/star.svg";
+import StarActive from "@/assets/pages/home/testimonials-section/ratings/star-active.svg";
+import StarInactive from "@/assets/pages/home/testimonials-section/ratings/star-inactive.svg";
 
 
 export default function Rating({ given, length = 5 }) {
@@ -8,7 +9,7 @@ export default function Rating({ given, length = 5 }) {
       {Array.from({ length: length }).map((_, index) =>
       <div className="icon-cont">
         {index < given ? 
-          <Star key={index}/> : ''}
+          <StarActive key={index}/> : <StarInactive key={index}/>}
       </div>
       )}
     </div>
