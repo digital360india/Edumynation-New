@@ -31,10 +31,10 @@ const RootLayout = ({ children }) => (
     <body style={{backgroundColor:"white"}}>
     <Authprovider>
         <main className='app  '>
-          <Navbar />
+          {/* <Navbar /> */}
           <Popup1/>
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </main>
         </Authprovider>
     </body>
