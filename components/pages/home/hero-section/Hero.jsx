@@ -9,7 +9,7 @@ export default function Hero() {
         h-[594px] flex justify-center items-center mt-14
         relative
         bg-center bg-cover bg-no-repeat bg-[url('/pages/home/hero-section/background-image.jpeg')]
-        after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black after:bg-opacity-50
+        overlay-black
       `}
     >
       <div className="wrapper flex flex-col items-center justify-center gap-16 z-10">

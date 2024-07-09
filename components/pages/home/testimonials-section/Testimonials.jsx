@@ -45,7 +45,7 @@ export default function Testimonials() {
         relative
         bg-center bg-cover bg-no-repeat
         bg-[url('/pages/home/testimonials-section/background-image.jpeg')]
-        after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black after:bg-opacity-60
+        overlay-black
       `}
     >
       <h2 className="heading px-5 z-10 text-3xl text-white font-semibold lg:text-4xl">
