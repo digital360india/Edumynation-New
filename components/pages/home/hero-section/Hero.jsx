@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="text-xl uppercase font-semibold">
             Welcome To
           </div>
-          <div className="text-4xl font-semibold">
+          <div className="text-4xl sm:text-5xl font-semibold">
             EdumyNation
           </div>
         </div>
