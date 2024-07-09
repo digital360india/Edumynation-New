@@ -11,7 +11,7 @@ export default function SearchBox() {
             <div className="input-with-icon-wrapper flex justify-center items-center">
               <Icon icon="solar:home-2-linear"/>
               <input 
-                className="w-full sm:w-[19vw] ps-3 sm:ps-5 sm:pe-5 py-3"
+                className="w-full text-xs ps-3 py-3 sm:w-[19vw] sm:px-5 sm:text-sm md:text-md"
                 type="text"
                 placeholder="School Type"
                 value={``}
@@ -20,12 +20,12 @@ export default function SearchBox() {
             </div>
             <Icon icon="solar:alt-arrow-down-linear"/>
           </div>
-          <hr className="divider w-full h-[3px] sm:w-[2.5rem] sm:absolute sm:left-[29.25%] sm:rotate-90 border-tertiaryLight"/>
+          <hr className="divider w-full h-[3px] border-tertiaryLight sm:w-[2.5rem] sm:absolute sm:left-[29.25%] sm:rotate-90"/>
           <div className="input-group w-[inherit] flex justify-between items-center px-1 sm:justify-start">
             <div className="input-with-icon-wrapper flex justify-center items-center">
-              <Icon className="text-xl"icon="system-uicons:location"/>
+              <Icon className="text-lg"icon="system-uicons:location"/>
               <input
-                className="w-full ps-3 sm:ps-5 sm:pe-5 py-3 sm:w-[26.6vw]"
+                className="w-full text-xs ps-3 py-3 sm:w-[26.6vw] sm:px-5 sm:text-sm md:text-md"
                 type="text"
                 placeholder="Search by Location"
                 value={``}
