@@ -44,6 +44,15 @@ const schools = [
     },
     image: "/pages/home/featured-schools-section/school-2.jpeg"
   },
+  {
+    id: 5,
+    name: "Primus Private School, UAE",
+    link: {
+      url: "#",
+      text: "Visit School",
+    },
+    image: "/pages/home/featured-schools-section/school-3.jpeg"
+  }
 ];
 
 
@@ -58,7 +67,7 @@ export default function FeaturedSchools() {
         responsive={responsive}
         keyBoardControl
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-        itemClass="p-2"
+        itemClass="py-2"
       >
         {schools.map(school =>
           <School key={school.id} school={school}/>
