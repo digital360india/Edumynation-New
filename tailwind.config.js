@@ -11,7 +11,8 @@ module.exports = {
         primaryBlue: '#2F3F93',
         secondaryBlue: "#ECEEF9",
         primaryLight: '#F8F4F1',
-        secondaryLight: "#F9F9F9"
+        secondaryLight: "#F9F9F9",
+        tertiaryLight: "#DFDFDF"
       },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
