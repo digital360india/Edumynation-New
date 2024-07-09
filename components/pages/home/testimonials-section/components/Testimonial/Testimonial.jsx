@@ -8,7 +8,7 @@ export default function Testimonial({ testimonial }) {
     <div className="testimonial wrapper pt-10 relative">
       <div className="flex flex-col gap-3 px-8 pt-10 pb-6 rounded-2xl bg-white">
         <Avatar
-          className="absolute top-[3%] left-[15%]"
+          className="absolute top-[3%] left-[43px]"
           src={testimonial.avatar}
           alt={testimonial.personName}
           size={60}

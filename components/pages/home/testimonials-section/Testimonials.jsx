@@ -41,15 +41,14 @@ export default function Testimonials() {
     <section
       id="testimonials"
       className={`
-        h-[421px]
-        flex flex-col justify-center gap-5 py-5
+        flex flex-col justify-center gap-5 px-[5vw] py-5 sm:px-[7vw] md:px-[9vw]
         relative
-        bg-center bg-fill bg-no-repeat
+        bg-center bg-cover bg-no-repeat
         bg-[url('/pages/home/testimonials-section/background-image.jpeg')]
         after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black after:bg-opacity-60
       `}
     >
-      <h2 className="heading px-5 z-10 text-3xl text-white font-semibold">
+      <h2 className="heading px-5 z-10 text-3xl text-white font-semibold lg:text-4xl">
         Testimonials
       </h2>
       <Carousel
