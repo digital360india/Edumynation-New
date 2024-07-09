@@ -32,7 +32,7 @@ const services = [
 export default function StudentServices() {
 
   return (
-    <section id="student-services" className="flex flex-col items-center gap-5 px-5 py-5">
+    <section id="student-services" className="flex flex-col items-center gap-5 px-5 py-5 sm:items-start">
       <h2 className="text-3xl text-primaryBlue font-semibold">
         Comprehensive Student Services
       </h2>
