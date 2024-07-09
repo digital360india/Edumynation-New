@@ -24,7 +24,7 @@ export default function Form() {
         <textarea
           className="p-3 rounded-lg"
           name="message"
-          rows="5"
+          rows="3"
           placeholder="Message for us"
         >
         </textarea>
