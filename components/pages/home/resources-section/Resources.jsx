@@ -5,7 +5,7 @@ import Resource from "./components/Resource";
 import { getCarouselResponsive } from "@/utilities/functions/pages/home/functions";
 
 
-const responsive = getCarouselResponsive();
+const responsive = getCarouselResponsive({desktopItems: 4});
 
 const resources = [
   {
@@ -51,7 +51,29 @@ const resources = [
       text: "Learn More",
       icon: "ph:arrow-up-right-thin"
     }
-  }
+  },
+  {
+    id: 5,
+    title: "Compare Schools",
+    icon: "ph:bus-thin",
+    text: "Lorem ipsum dolor sit amet consectetur. Dolor magna lorem eget facilisis semper vestibulum lacus elit sit. Aliquam sed tristique facilisi nunc feugiat libero sem rutrum in. Libero.",
+    link: {
+      url: "#",
+      text: "Learn More",
+      icon: "ph:arrow-up-right-thin"
+    }
+  },
+  {
+    id: 6,
+    title: "Compare Schools",
+    icon: "ph:bus-thin",
+    text: "Lorem ipsum dolor sit amet consectetur. Dolor magna lorem eget facilisis semper vestibulum lacus elit sit. Aliquam sed tristique facilisi nunc feugiat libero sem rutrum in. Libero.",
+    link: {
+      url: "#",
+      text: "Learn More",
+      icon: "ph:arrow-up-right-thin"
+    }
+  },
 ];
 
 
