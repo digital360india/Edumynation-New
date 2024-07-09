@@ -1,13 +1,16 @@
 /* React Multi-Carousel */
 
 export function getCarouselResponsive({
-  desktopBreakpoint = { max: 3000, min: 1024 },
+  
+  // subtracting 1 from the breakpoints to match with tailwindcss breakpoints
+
+  desktopBreakpoint = { max: 3000 - 1, min: 1024 - 1 },
   desktopSlidesToSlide = 1,
   desktopItems = 3,
-  tabletBreakpoint = { max: 1024, min: 640 },
+  tabletBreakpoint = { max: 1024 - 1, min: 640 - 1 },
   tabletSlidesToSlide = 1,
   tabletItems = 2,
-  mobileBreakpoint = { max: 640, min: 0 },
+  mobileBreakpoint = { max: 640 - 1, min: 0 },
   mobileSlidesToSlide = 1,
   mobileItems = 1
 } = {}) {
