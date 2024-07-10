@@ -23,7 +23,7 @@ export default function SearchBox() {
           <hr className="divider w-full h-[3px] border-tertiaryLight sm:w-[2.5rem] sm:absolute sm:left-[29.25%] sm:rotate-90"/>
           <div className="input-group w-[inherit] flex justify-between items-center px-1 sm:justify-start">
             <div className="input-with-icon-wrapper flex justify-center items-center">
-              <Icon className="text-lg"icon="system-uicons:location"/>
+              <Icon className="text-lg" icon="system-uicons:location"/>
               <input
                 className="w-full text-xs ps-3 py-3 sm:w-[26.6vw] sm:px-5 sm:text-sm md:text-md"
                 type="text"
