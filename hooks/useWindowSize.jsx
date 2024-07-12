@@ -5,7 +5,9 @@ const useWindowSize = () => {
   
   const [screenWidth, setScreenWidth] = useState(0);
 
+  
   useEffect(() => {
+
     const handleResize = () => setScreenWidth(window.innerWidth);
 
     // Set size at the first client-side load
@@ -17,7 +19,7 @@ const useWindowSize = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [setScreenWidth]);
 
   return screenWidth;
 };
