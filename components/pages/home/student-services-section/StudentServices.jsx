@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 
