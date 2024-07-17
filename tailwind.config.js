@@ -12,7 +12,9 @@ module.exports = {
         secondaryBlue: "#ECEEF9",
         primaryLight: '#F8F4F1',
         secondaryLight: "#F9F9F9",
-        tertiaryLight: "#DFDFDF"
+        tertiaryLight: "#DFDFDF",
+        quaternaryLight: "#D7D7D7",
+        primaryOrange: "#FF7900"
       },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
