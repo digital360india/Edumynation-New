@@ -1,6 +1,8 @@
 import './globals.css'
 
 import 'react-multi-carousel/lib/styles.css';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+
 
 import Authprovider from '@/components/Authprovider/Authprovider';
 import { Inter } from 'next/font/google'
