@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const useWindowSize = () => {
   
   const [screenWidth, setScreenWidth] = useState(0);
 
-  
   useEffect(() => {
-
     const handleResize = () => setScreenWidth(window.innerWidth);
 
     // Set size at the first client-side load
