@@ -19,6 +19,7 @@ async function get(params) {
 
 // SSR
 export async function generateMetadata({ params }) {
+  
   const categoryData = await base("category 2")
     .select({
       filterByFormula: `slug= "${params.slug}"`,
@@ -66,13 +67,15 @@ export async function generateMetadata({ params }) {
 
 //Main function
 export default async function ListingPage({ params }) {
+
   const categoryData = await get(params.slug);
-  // console.log(categoryData);
+
   return (
     <>
+      {/*For SEO*/}
       <head>
         <script
-        defer={true}
+          defer={true}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: categoryData?.schema,
@@ -92,11 +95,10 @@ export default async function ListingPage({ params }) {
         />
       </head>
 
-
       <div className="bg-white">
         <ListingHero categoryData={categoryData}></ListingHero>
         <SchoolCard categoryData={categoryData} />
-     <Article1 art={categoryData?.article} />
+        <Article1 art={categoryData?.article} />
         <Faq categoryData={categoryData} />
         <Testimonials />
       </div>

@@ -9,7 +9,7 @@ export default function ContactUsForm() {
         <div className="image-cont hidden md:w-[80%] md:block">
           <img className="md:w-full md:h-full md:object-cover md:object-center md:rounded-xl" src="/pages/home/contact-us-form-section/globe.jpeg" alt="Globe Image"/>
         </div>
-        <div className="form-wrapper w-full md:w-[80%] flex flex-col items-center justify-center justify-center gap-5">
+        <div className="form-wrapper w-full md:w-[80%] flex flex-col items-center justify-center gap-5">
           <h2 className="text-3xl 2xl:text-4xl font-semibold">
             Contact Us
           </h2>
