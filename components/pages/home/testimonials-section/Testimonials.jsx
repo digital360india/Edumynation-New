@@ -58,7 +58,7 @@ export default function Testimonials() {
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
         containerClass="pb-10 z-10"
         sliderClass="flex"
-        itemClass="px-5"
+        itemClass="px-5 select-none fix-drag"
       >
         {testimonials.map(testimonial => 
           <Testimonial key={testimonial.id} testimonial={testimonial}/>

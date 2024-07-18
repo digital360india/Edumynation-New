@@ -48,7 +48,7 @@ export default function SchoolByCities() {
         responsive={responsive}
         keyBoardControl
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-        itemClass="px-2 h-[50vw] sm:h-[35vw] lg:h-[25vw] xl:h-[25vw] 2xl:h-[400px]"
+        itemClass="h-[50vw] px-2 select-none fix-drag sm:h-[35vw] lg:h-[25vw] xl:h-[25vw] 2xl:h-[400px] "
       >
         {cities.map(city => 
           <City key={city.id} city={city}/>

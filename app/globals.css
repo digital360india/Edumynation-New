@@ -109,3 +109,15 @@ body {
     opacity: 0.5;
   }
 }
+
+
+/* Fix Dragging in React Multi Carousel */
+
+.fix-drag::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

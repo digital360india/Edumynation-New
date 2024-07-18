@@ -89,7 +89,7 @@ export default function Resources() {
         responsive={responsive}
         keyBoardControl
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-        itemClass="border-x-[1.25rem] p-5 border-white bg-primaryLight"
+        itemClass="border-x-[1.25rem] p-5 select-none fix-drag border-white bg-primaryLight"
       >
         {resources.map(resource => (
           <Resource key={resource.id} resource={resource}/>

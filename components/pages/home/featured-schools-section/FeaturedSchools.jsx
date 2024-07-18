@@ -67,7 +67,7 @@ export default function FeaturedSchools() {
         responsive={responsive}
         keyBoardControl
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-        itemClass="py-2"
+        itemClass="py-2 select-none fix-drag"
       >
         {schools.map(school =>
           <School key={school.id} school={school}/>

@@ -118,7 +118,7 @@ export default function NewSchoolCard() {
             responsive={responsive}
             keyBoardControl
             removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-            itemClass="px-[5vw]"
+            itemClass="px-[5vw] select-none fix-drag"
           >
             {images.map(image =>
               <div key={image.id} className="image-cont h-[60vw] sm:h-[28vw]">
