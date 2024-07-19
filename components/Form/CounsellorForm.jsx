@@ -55,6 +55,7 @@ function counsellorForm() {
     phoneNumber: "",
     email: "",
   });
+  
   const classes = [
     {
       value: "pre",
@@ -127,7 +128,6 @@ function counsellorForm() {
   }
   useEffect(() => {
     setError(null);
-    // console.log("insideeeeeee");
   }, []);
   useEffect(() => {
     if (error == false) {

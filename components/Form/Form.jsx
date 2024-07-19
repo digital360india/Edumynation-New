@@ -2,11 +2,8 @@
 
 import { useState } from "react";
 import { base } from "../../app/api/auth/airtable";
-// import createEnquireForm from "../api/createEnquireForm";
-import { useRouter } from "next/router";
 
 const Form = ({ color }) => {
-  // const router = useRouter();
   const [details, setDetails] = useState({
     name: "",
     phoneNumber: "",
@@ -47,7 +44,7 @@ const Form = ({ color }) => {
             phoneNumber: "",
             name: "",
           });
-          console.log(record.getId());
+     
           setBtn(false);
         });
       }
@@ -136,14 +133,7 @@ const Form = ({ color }) => {
                 <option value="igcse">Igcse</option>
                 <option value="cie">Cie </option>
               </select>
-              {/* <select
-                className="lg:w-[100px] w-[80px] h-12  outline-none"
-                name="cars"
-                id="cars"
-                defaultValue="All-Schools"
-              >
-                <option value="All-Schools">All-Schools</option>
-              </select> */}
+   
             </div>
             <div className="text-center mt-3">
               <span className="text-[#2F3F93]">{msg}</span>
