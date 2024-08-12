@@ -1,3 +1,5 @@
+// 'use client'
+
 import {
   BsFacebook,
   BsPinterest,
@@ -8,14 +10,19 @@ import {
 } from "react-icons/bs";
 
 import { IoEarth } from "react-icons/io5";
-
+// import { useEffect, useState} from "react";
 
 const Author = () => {
 
+    // useEffect(() => {
+    //     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    //   }, []);
   return (
     <>
-      <div className="w-screen">
-        <div className="flex flex-col  items-center p-16">
+
+
+<div className="w-screen">
+    <div className="flex flex-col  items-center p-16">
           <h1 className="text-4xl lg:text-5xl text-center font-bold text-blue-950 py-4 lg:py-10">
             Author
           </h1>
@@ -117,8 +124,9 @@ const Author = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
 
-export default Author;
+    </>
+  )
+}
+
+export default Author

@@ -1,11 +1,4 @@
 import './globals.css'
-
-import 'react-multi-carousel/lib/styles.css';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-
-import 'react-phone-input-2/lib/style.css';
-
-
 import Authprovider from '@/components/Authprovider/Authprovider';
 import { Inter } from 'next/font/google'
 import Navbar from "@/components/Navbar";
@@ -35,10 +28,10 @@ const RootLayout = ({ children }) => (
     <body style={{backgroundColor:"white"}}>
     <Authprovider>
         <main className='app  '>
-          {/* <Navbar /> */}
+          <Navbar />
           <Popup1/>
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </main>
         </Authprovider>
     </body>
